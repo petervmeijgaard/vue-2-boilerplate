@@ -1,0 +1,49 @@
+<v-layout>
+  <div class="panel panel-primary">
+
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        Login
+      </h1>
+    </div>
+
+    <div class="panel-body">
+      <form @submit.prevent="login(user)">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-envelope fa-fw"></i>
+            </div>
+            <input
+              v-model="user.email"
+              type="email"
+              placeholder="Email"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-lock fa-fw"></i>
+            </div>
+            <input
+              v-model="user.password"
+              type="password"
+              placeholder="Password"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="panel-footer">
+      No account? <router-link :to="{ name: 'register.index' }">Register</router-link>
+    </div>
+  </div>
+</v-layout>

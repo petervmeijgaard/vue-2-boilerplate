@@ -1,0 +1,88 @@
+<v-layout>
+  <div class="panel panel-primary">
+
+    <div class="panel-heading">
+      <h1 class="panel-title">
+        Login
+      </h1>
+    </div>
+
+    <div class="panel-body">
+      <form @submit.prevent="register(user)">
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-user fa-fw"></i>
+            </div>
+            <input
+              v-model="user.firstName"
+              type="text"
+              placeholder="First name"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-user fa-fw"></i>
+            </div>
+            <input
+              v-model="user.lastName"
+              type="text"
+              placeholder="Last name"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-envelope fa-fw"></i>
+            </div>
+            <input
+              v-model="user.email"
+              type="email"
+              placeholder="Email"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-lock fa-fw"></i>
+            </div>
+            <input
+              v-model="user.password"
+              type="password"
+              placeholder="Password"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="input-group-addon">
+              <i class="fa fa-lock fa-fw"></i>
+            </div>
+            <input
+              v-model="user.passwordConfirm"
+              type="password"
+              placeholder="Confirm password"
+              class="form-control"
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary">
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="panel-footer">
+      Already got an account? <router-link :to="{ name: 'login.index' }">Login</router-link>
+    </div>
+  </div>
+</v-layout>
