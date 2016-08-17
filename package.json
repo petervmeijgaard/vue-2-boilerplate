@@ -1,0 +1,33 @@
+{
+  "name": "vue-2-boilerplate",
+  "version": "0.0.0",
+  "description": "A boilerplate for medium to large Vue 2 single page applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petervmeijgaard/vue-2-boilerplate.git"
+  },
+  "keywords": [
+    "Vue",
+    "2",
+    "Next",
+    "Boilerplate",
+    "Webpack",
+    "Lint",
+    "Medium",
+    "Large",
+    "SPA",
+    "Single",
+    "Page",
+    "Application"
+  ],
+  "author": "Peter van Meijgaard <petervanmeijgaard@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petervmeijgaard/vue-2-boilerplate/issues"
+  },
+  "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme"
+}
