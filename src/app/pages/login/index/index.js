@@ -5,7 +5,8 @@
  * Page where the user can login
  */
 
-import loader from "./../../../utils/loader";
+import authService from './../../../services/auth';
+import loader from './../../../utils/loader';
 
 export default {
 
@@ -16,6 +17,12 @@ export default {
         password: null,
       },
     };
+  },
+
+  methods: {
+    login(user) {
+      authService.login(user);
+    },
   },
 
   components: {

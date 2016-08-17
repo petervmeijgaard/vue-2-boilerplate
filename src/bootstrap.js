@@ -15,14 +15,14 @@
  *
  * http://rc.vuejs.org/guide/
  */
-import Vue from "vue";
-import VueResource from "vue-resource";
-import authService from "./app/services/auth";
-import VuexRouterSync from "vuex-router-sync";
-import store from "./app/store";
-import VueRouter from "vue-router";
-import routes from "./app/routes";
-import jQuery from "jquery";
+import Vue from 'vue';
+import VueResource from 'vue-resource';
+import authService from './app/services/auth';
+import VuexRouterSync from 'vuex-router-sync';
+import store from './app/store';
+import VueRouter from 'vue-router';
+import routes from './app/routes';
+import jQuery from 'jquery';
 
 Vue.config.debug = process.env.NODE_ENV !== 'production';
 
@@ -126,6 +126,17 @@ window.$ = window.jQuery = jQuery;
  */
 require('bootstrap');
 require('bootstrap/less/bootstrap.less');
+
+
+/* ============
+ * Font Awesome
+ * ============
+ *
+ * Require font-awesome for the app
+ *
+ * http://http://fontawesome.io/
+ */
+require('font-awesome/less/font-awesome.less');
 
 
 /* ============

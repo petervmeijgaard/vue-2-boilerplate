@@ -8,11 +8,11 @@
     </div>
 
     <div class="panel-body">
-      <form>
+      <form @submit.prevent="login(user)">
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
-              <i class="glyphicon glyphicon-envelope"></i>
+              <i class="fa fa-envelope fa-fw"></i>
             </div>
             <input
               v-model="user.email"
@@ -25,7 +25,7 @@
         <div class="form-group">
           <div class="input-group">
             <div class="input-group-addon">
-              <i class="glyphicon glyphicon-lock"></i>
+              <i class="fa fa-lock fa-fw"></i>
             </div>
             <input
               v-model="user.password"
@@ -41,6 +41,9 @@
           </button>
         </div>
       </form>
+    </div>
+    <div class="panel-footer">
+      No account? <router-link :to="{ name: 'register.index' }">Register</router-link>
     </div>
   </div>
 </v-layout>

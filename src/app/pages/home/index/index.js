@@ -1,4 +1,4 @@
-import loader from "./../../../utils/loader";
+import loader from './../../../utils/loader';
 
 export default {
   components: {

@@ -5,7 +5,7 @@
  * The routes and redirects are defined in this file
  */
 
-import loader from "./utils/loader";
+import loader from './utils/loader';
 
 /**
  * The routes

@@ -10,6 +10,8 @@ module.exports = {
   rules: {
     'global-require': 0,
 
+    'no-param-reassign': 0,
+
     'import/no-unresolved': 0,
     'import/imports-first': 0,
 

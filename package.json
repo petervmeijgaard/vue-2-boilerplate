@@ -33,6 +33,7 @@
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
     "jquery": "^3.1.0",
     "vue": "^2.0.0-rc.2",
     "vue-resource": "^0.9.3",

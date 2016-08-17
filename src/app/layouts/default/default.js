@@ -8,4 +8,12 @@
  * This way the app stays clean.
  */
 
-export default {};
+import authService from './../../services/auth';
+
+export default {
+  methods: {
+    logout() {
+      authService.logout();
+    },
+  },
+};
