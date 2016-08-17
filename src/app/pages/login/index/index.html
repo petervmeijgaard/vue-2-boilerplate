@@ -1,13 +1,9 @@
 <v-layout>
-  <div class="panel panel-primary">
-
-    <div class="panel-heading">
-      <h1 class="panel-title">
-        Login
-      </h1>
-    </div>
-
-    <div class="panel-body">
+  <v-panel contextual-style="primary">
+    <h1 class="panel-title" slot="heading">
+      Login
+    </h1>
+    <div slot="body">
       <form @submit.prevent="login(user)">
         <div class="form-group">
           <div class="input-group">
@@ -42,8 +38,9 @@
         </div>
       </form>
     </div>
-    <div class="panel-footer">
-      No account? <router-link :to="{ name: 'register.index' }">Register</router-link>
+    <div slot="footer">
+      No account?
+      <router-link :to="{ name: 'register.index' }">Register</router-link>
     </div>
-  </div>
+  </v-panel>
 </v-layout>

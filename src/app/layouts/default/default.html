@@ -18,14 +18,28 @@
 
       <div class="collapse navbar-collapse" id="navbar">
         <ul class="nav navbar-nav">
-          <li class="nav-item">
-            <router-link
-              :to="{ name: 'account.index' }"
-              class="nav-link"
-            >
+          <router-link
+            :to="{ name: 'home.index' }"
+            active-class="active"
+            class="nav-item"
+            tag="li"
+          >
+            <a>
+              Home
+            </a>
+          </router-link>
+        </ul>
+        <ul class="nav navbar-nav">
+          <router-link
+            :to="{ name: 'account.index' }"
+            active-class="active"
+            class="nav-item"
+            tag="li"
+          >
+            <a>
               Account
-            </router-link>
-          </li>
+            </a>
+          </router-link>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>

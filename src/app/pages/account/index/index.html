@@ -1,11 +1,11 @@
 <v-layout>
-  <div class="panel panel-primary">
-    <div class="panel-heading">
-      <h1 class="panel-title">
-        My Account
-      </h1>
-    </div>
-    <div class="panel-body">
+  <v-panel contextual-style="primary">
+    <h1 class="panel-title"
+        slot="heading"
+    >
+      My Account
+    </h1>
+    <div slot="body">
       <table class="table table-striped">
         <thead>
         <tr>
@@ -35,8 +35,8 @@
         </tbody>
       </table>
     </div>
-    <div class="panel-footer">
+    <div slot="footer">
       Made with love by Vivid Web
     </div>
-  </div>
+  </v-panel>
 </v-layout>

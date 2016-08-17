@@ -15,7 +15,7 @@ const failed = () => {
 export default () => {
   /*
    * Normally you would perform an AJAX-request.
-   * But to get the example working, the data is hardcoded
+   * But to get the example working, the data is hardcoded.
    */
   const succeeds = true;
 

@@ -27,5 +27,6 @@ export default {
 
   components: {
     VLayout: loader.layout('minimal'),
+    VPanel: loader.component('panel'),
   },
 };
