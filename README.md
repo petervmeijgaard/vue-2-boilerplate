@@ -125,7 +125,9 @@ This is where transformers come in.
 So given the previous example, using a transformer, it will look something like this:
 ``` JSON
 {
-  ...
+  "id" : 1,
+  "title" : "Hello World!",
+  "content" : "Lorem Ipsum",
   "createdAt" : "today"
 }
 ```
