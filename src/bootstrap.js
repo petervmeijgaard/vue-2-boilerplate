@@ -16,13 +16,6 @@
  * http://rc.vuejs.org/guide/
  */
 import Vue from 'vue';
-import VueResource from 'vue-resource';
-import authService from './app/services/auth';
-import VuexRouterSync from 'vuex-router-sync';
-import store from './app/store';
-import VueRouter from 'vue-router';
-import routes from './app/routes';
-import jQuery from 'jquery';
 
 Vue.config.debug = process.env.NODE_ENV !== 'production';
 
@@ -36,6 +29,8 @@ Vue.config.debug = process.env.NODE_ENV !== 'production';
  *
  * https://github.com/vuejs/vue-resource/tree/master/docs
  */
+import VueResource from 'vue-resource';
+import authService from './app/services/auth';
 
 Vue.use(VueResource);
 
@@ -59,6 +54,8 @@ Vue.http.interceptors.push((request, next) => {
  *
  * https://github.com/vuejs/vuex-router-sync/blob/master/README.md
  */
+import VuexRouterSync from 'vuex-router-sync';
+import store from './app/store';
 
 store.dispatch('checkAuthentication');
 
@@ -72,6 +69,8 @@ store.dispatch('checkAuthentication');
  *
  * http://router.vuejs.org/en/index.html
  */
+import VueRouter from 'vue-router';
+import routes from './app/routes';
 
 Vue.use(VueRouter);
 
@@ -82,7 +81,7 @@ router.beforeEach((route, redirect, next) => {
   if (route.matched.some(m => m.meta.auth) && !store.state.auth.authenticated) {
     /*
      * If the user is not authenticated and visits
-     * an authenticated page, redirect to the login page
+     * a page that requires authentication, redirect to the login page
      */
     redirect({
       name: 'login.index',
@@ -112,6 +111,7 @@ Vue.router = router;
  *
  * http://jquery.com/
  */
+import jQuery from 'jquery';
 
 window.$ = window.jQuery = jQuery;
 
@@ -144,9 +144,13 @@ require('font-awesome/less/font-awesome.less');
  * ============
  *
  * Require the application styling.
- * Stylus is used for this boilerplate, but no worries!
- * Remove the stylus directory to the CSS preprocessor you want.
- * Require the entry point here. It's that easy...
+ * Stylus is used for this boilerplate.
+ *
+ * If you don't want to use Stylus, that's fine!
+ * Replace the stylus directory with the CSS preprocessor you want.
+ * Require the entry point here & install the webpack loader.
+ *
+ * It's that easy...
  *
  * http://stylus-lang.com/
  */

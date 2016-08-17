@@ -28,4 +28,15 @@ export default {
   layout(layout) {
     return require(`./../layouts/${layout}/${layout}.vue`);
   },
+
+  /**
+   * Method used to load a layout
+   *
+   * @param component The name of the layout
+   *
+   * @returns {*} The layout
+   */
+  component(component) {
+    return require(`./../components/${component}/${component}.vue`);
+  },
 };
