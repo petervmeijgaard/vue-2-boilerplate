@@ -18,20 +18,6 @@ $ npm i
 But yeah, this will basically do the same as `npm install`.
 If even this is too much of a deal, try creating an alias and bind `npm install` to `npmi`.
 
-## What's included ##
-- `npm run dev`: first-in-class development experience.
-  - Webpack + `vue-loader` for single file Vue components.
-  - State preserving hot-reload
-  - State preserving compilation error overlay
-  - Lint-on-save with ESLint
-  - Source maps
-
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
-
 ## Configuration ##
 > Wait a minute, you just said that I only need to run npm install?
 > What's this? I need to do more?
@@ -46,6 +32,21 @@ Out of the box the applications comes bundled with AJAX-support.
 The only thing you need to do is change `http://example.*/api/v1` to your endpoint.
 
 For more information, visit the [docs](http://vuejs-templates.github.io/webpack/env.html).
+
+## What's included ##
+- `npm run dev`: first-in-class development experience.
+  - Webpack + `vue-loader` for single file Vue components.
+  - State preserving hot-reload
+  - State preserving compilation error overlay
+  - Lint-on-save with ESLint
+  - Source maps
+
+- `npm run build`: Production ready build.
+  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
+  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
+  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
+  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
+
 
 ## Important Files ##
 So there are a couple of important files that needs to be addressed:
@@ -96,14 +97,14 @@ Inside the mixins directory is a `slot`-mixin.
 This mixin will add the `hasSlot()`-method to all the components it is used in.
 
 ### Pages ###
-The pages are placed/views inside this directory.
+The pages/views are placed inside this directory.
 By default it comes with an `account/index`, `home/index`, `login/index` and a `register/index` page, 
 but feel free to add more.
 
 ### Services ###
 You can compare services with controllers.
 They connect with external services, like an API, and call actions on the store.
-Normally you would perform an AJAX-request, but to get the example working, the data is hardcoded.
+Normally you would perform AJAX-requests from the services, but to get the example working, the data is hardcoded.
 
 ### Store ###
 As mentioned before, Vuex is used as a single point of truth.
