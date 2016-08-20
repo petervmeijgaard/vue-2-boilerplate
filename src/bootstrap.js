@@ -24,7 +24,7 @@ Vue.config.debug = process.env.NODE_ENV !== 'production';
  * Vue Resource
  * ============
  *
- * The plugin for Vue.js provides services for making web requests and handle
+ * Vue Resource provides services for making web requests and handle
  * responses using a XMLHttpRequest or JSONP.
  *
  * https://github.com/vuejs/vue-resource/tree/master/docs
@@ -120,7 +120,7 @@ window.$ = window.jQuery = jQuery;
  * Bootstrap
  * ============
  *
- * Require bootstrap for the app
+ * Require bootstrap
  *
  * http://getbootstrap.com/
  */
@@ -132,7 +132,7 @@ require('bootstrap/less/bootstrap.less');
  * Font Awesome
  * ============
  *
- * Require font-awesome for the app
+ * Require font-awesome
  *
  * http://http://fontawesome.io/
  */
