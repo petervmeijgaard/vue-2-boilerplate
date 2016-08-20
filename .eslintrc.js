@@ -10,8 +10,6 @@ module.exports = {
   rules: {
     'global-require': 0,
 
-    'linebreak-style': 0,
-
     'no-param-reassign': 0,
 
     'import/no-unresolved': 0,
