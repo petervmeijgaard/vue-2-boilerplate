@@ -28,6 +28,25 @@ class CreateComponent {
     this.main = args[1];
     this.subs = args.splice(2);
 
+    /*
+     * Some basic error handling and provide tips.
+     */
+
+    // Type undefined
+    if(typeof(this.types[args[0]]) == 'undefined') {
+      console.log(`ERROR: You didn't specify whether you want to create a "page" or "component" \n`);
+      console.log(`Example for creating a dropdown component: \n npm run create component dropdown \n\n`);
+      console.log(`Example for creating a blog page: \n npm run create page blog`);
+      return;
+    }
+
+    // Name undefined
+    if(typeof(this.main) == 'undefined') {
+      console.log(`ERROR: You didn't specify a name for your ` + this.type + ` \n`);
+      console.log(`Example: npm run create ` + this.type + ` name-of-your-component`);
+      return;
+    }
+
     this.init();
   }
 
