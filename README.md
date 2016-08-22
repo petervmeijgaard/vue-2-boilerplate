@@ -48,6 +48,9 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
 
 - `npm run create`: Scaffold pages and components.
+  - Example 1: `npm run create component dropdown` Creates a single component named 'dropdown'.
+  - Example 2: `npm run create page blog` Creates a single page named 'blog'.
+  - Advanced example: `npm run create component dropdown dropdown-item` Creates a component named 'dropdown' with a child component named 'dropdown-item'.
 
 ## Important Files ##
 So there are a couple of important files that needs to be addressed:
