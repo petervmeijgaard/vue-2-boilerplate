@@ -7,7 +7,9 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "postinstall" : "npm run build"
+    "postinstall": "npm run build",
+    "create": "node task/create-component/task.js",
+    "make": "node task/make/index.js"
   },
   "repository": {
     "type": "git",
@@ -68,6 +70,7 @@
     "json-loader": "^0.5.4",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "mkdirp": "^0.5.1",
     "ora": "^0.3.0",
     "shelljs": "^0.7.3",
     "stylus": "^0.54.5",
