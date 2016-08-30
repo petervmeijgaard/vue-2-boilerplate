@@ -47,6 +47,10 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
 
+- `npm run create`: Scaffold pages and components.
+  - Example 1: `npm run create component dropdown` Creates a single component named 'dropdown'.
+  - Example 2: `npm run create page blog` Creates a single page named 'blog'.
+  - Advanced example: `npm run create component dropdown dropdown-item` Creates a component named 'dropdown' with a child component named 'dropdown-item'.
 
 ## Important Files ##
 So there are a couple of important files that needs to be addressed:
@@ -86,7 +90,7 @@ Your layout files will be placed inside this directory.
 When you are building a large single page application, you will be using different layouts.
 For instance, your login-page or register-page will have a different layout than your account-page.
 
-The boilerplate comes out of the box with two layouts included. 
+The boilerplate comes out of the box with two layouts included.
 A minimal layout, used for the login and register page, and a default layout.
 Used for the home and account page.
 
@@ -98,7 +102,7 @@ This mixin will add the `hasSlot()`-method to all the components it is used in.
 
 ### Pages ###
 The pages/views are placed inside this directory.
-By default it comes with an `account/index`, `home/index`, `login/index` and a `register/index` page, 
+By default it comes with an `account/index`, `home/index`, `login/index` and a `register/index` page,
 but feel free to add more.
 
 ### Services ###
@@ -122,7 +126,7 @@ If you have an API where you can retrieve posts from, a post wil look something 
 }
 ```
 However, it feels weird to use snake_cased variables inside your camelCased application.
-This is where transformers come in. 
+This is where transformers come in.
 So given the previous example, using a transformer, it will look something like this:
 ``` JSON
 {
