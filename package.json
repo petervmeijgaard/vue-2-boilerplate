@@ -7,8 +7,8 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "postinstall" : "npm run build",
-    "create": "node task/create-component/task.js"
+    "postinstall": "npm run build",
+    "make": "node task/make/index.js"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,10 @@
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "cli-color": "^1.1.0",
     "font-awesome": "^4.6.3",
     "jquery": "^3.1.0",
+    "shelljs": "^0.7.4",
     "vue": "^2.0.0-rc.2",
     "vue-resource": "^0.9.3",
     "vue-router": "^2.0.0-rc.3",

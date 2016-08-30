@@ -18,13 +18,7 @@ export default class Transformer {
    * @returns {Array} The transformed items
    */
   static fetchCollection(items) {
-    const newCollection = [];
-
-    items.forEach((item) => {
-      newCollection.push(this.fetch(item));
-    });
-
-    return newCollection;
+    return items.map(item => this.fetch(item));
   }
 
   /**
@@ -34,12 +28,6 @@ export default class Transformer {
    * @returns {Array} The transformed items
    */
   static sendCollection(items) {
-    const newCollection = [];
-
-    items.forEach((item) => {
-      newCollection.push(this.send(item));
-    });
-
-    return newCollection;
+    return items.map(item => this.send(item));
   }
 }
