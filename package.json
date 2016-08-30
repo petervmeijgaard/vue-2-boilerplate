@@ -8,7 +8,6 @@
     "build": "node build/build.js",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "postinstall": "npm run build",
-    "create": "node task/create-component/task.js",
     "make": "node task/make/index.js"
   },
   "repository": {
