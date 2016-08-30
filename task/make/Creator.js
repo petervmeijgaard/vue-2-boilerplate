@@ -1,4 +1,5 @@
-const mkdirp = require('mkdirp');
+require('shelljs/global');
+const fs = require('fs');
 
 class Creator {
   constructor(name, baseDirectory) {
@@ -32,20 +33,8 @@ class Creator {
     this.filename = name;
   }
 
-  make() {
-    this.createPaths();
-
-    console.dir(this);
-  }
-
   createPaths() {
-    mkdirp(`${this.appPath}/${this.path}`, (err) => {
-      if (err) {
-        console.error(err);
-      } else {
-        console.log('pow!');
-      }
-    });
+    mkdir('-p', this.fullPath);
   }
 }
 
