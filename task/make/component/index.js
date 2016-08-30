@@ -40,7 +40,7 @@ class ComponentCreator extends BaseCreator {
       });
     });
     if (successful) {
-      console.log(clc.green('Page created successfully!'));
+      console.log(clc.green('Component created successfully!'));
     }
   }
 }
