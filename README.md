@@ -10,9 +10,9 @@ To get up and running run:
 $ npm install
 $ npm run dev
 ```
-Yes, that's it. Only a two commands.
+Yes, that's it. Only two commands!
 
-If you still think that's to much effort, you could also run:
+If you still think that's too much effort, you could also run:
 ``` bash
 $ npm i && npm run dev
 ```
