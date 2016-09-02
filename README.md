@@ -8,15 +8,16 @@ Common topics are discussed in the Vuejs [docs](http://vuejs-templates.github.io
 To get up and running run:
 ``` bash
 $ npm install
+$ npm run dev
 ```
-Yes, that's it. Only a single command.
+Yes, that's it. Only a two commands.
 
 If you still think that's to much effort, you could also run:
 ``` bash
-$ npm i
+$ npm i && npm run dev
 ```
 But yeah, this will basically do the same as `npm install`.
-If even this is too much of a deal, try creating an alias and bind `npm install` to `npmi`.
+If even this is too much of a deal, try creating an alias and bind `npm install && npm run dev` to `npmid`.
 
 ## Configuration ##
 > Wait a minute, you just said that I only need to run npm install?
@@ -47,9 +48,12 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
 
-- `npm run make`: Scaffold pages and components.
-  - `npm run make component {component-name}` Creates a single component.
-  - `npm run make page {page-name}` Creates a single page.
+## Other tools ##
+### Scaffolding ###
+For quickly scaffolding components, pages, layouts and more, install the [blucify CLI tool](https://github.com/blucify/blucify-cli).
+``` bash
+$ npm install -g blucify-cli
+```
 
 ## Important Files ##
 So there are a couple of important files that needs to be addressed:
