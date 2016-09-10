@@ -50,9 +50,9 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
 
 ## Other tools ##
 ### Scaffolding ###
-For quickly scaffolding components, pages, layouts and more, install the [blucify CLI tool](https://github.com/blucify/blucify-cli).
+For quickly scaffolding components, pages, layouts and more, install the [Vueture CLI tool](https://github.com/vueture/vueture-cli).
 ``` bash
-$ npm install -g blucify-cli
+$ npm install -g vueture-cli
 ```
 
 ## Important Files ##
