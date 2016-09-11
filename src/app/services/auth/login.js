@@ -18,7 +18,15 @@ const failed = () => {
 export default (user) => {
   /*
    * Normally you would perform an AJAX-request.
-   * But to get the example working, the data is hardcoded
+   * But to get the example working, the data is hardcoded.
+   *
+   * With Vue Resource, you can do something like this:
+   * Vue.http.post('auth/login', user)
+   *   .then((res) => {
+   *     success(res);
+   *   }, (res) => {
+   *     failed(res);
+   *   });
    */
   if (!user.email || !user.password) {
     failed();
