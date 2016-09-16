@@ -104,6 +104,26 @@ Vue.router = router;
 
 
 /* ============
+ * Vue i18n
+ * ============
+ *
+ * Internationalization plugin of Vue.js
+ *
+ * https://kazupon.github.io/vue-i18n/
+ */
+import VueI18n from 'vue-i18n';
+import locale from './app/locale';
+
+Vue.use(VueI18n);
+
+Vue.config.lang = 'nl';
+
+Object.keys(locale).forEach((lang) => {
+  Vue.locale(lang, locale[lang]);
+});
+
+
+/* ============
  * jQuery
  * ============
  *
@@ -155,6 +175,7 @@ require('font-awesome/less/font-awesome.less');
  * http://stylus-lang.com/
  */
 require('./assets/stylus/app.styl');
+
 
 export default {
   router,
