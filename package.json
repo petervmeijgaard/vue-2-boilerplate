@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
+    "babel-runtime": "^6.0.0",
     "bootstrap": "^3.3.7",
     "cli-color": "^1.1.0",
     "font-awesome": "^4.6.3",
