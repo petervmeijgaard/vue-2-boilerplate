@@ -6,7 +6,6 @@
  */
 
 import authService from './../../../services/auth';
-import loader from './../../../utils/loader';
 
 export default {
 
@@ -26,7 +25,7 @@ export default {
   },
 
   components: {
-    VLayout: loader.layout('minimal'),
-    VPanel: loader.component('panel'),
+    VLayout: require('layouts/minimal/minimal.vue'),
+    VPanel: require('components/panel/panel.vue'),
   },
 };

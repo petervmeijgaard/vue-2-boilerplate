@@ -1,8 +1,13 @@
-import loader from './../../../utils/loader';
+/* ============
+ * Home Index Page
+ * ============
+ *
+ * The home index page
+ */
 
 export default {
   components: {
-    VLayout: loader.layout('default'),
-    VPanel: loader.component('panel'),
+    VLayout: require('layouts/default/default.vue'),
+    VPanel: require('components/panel/panel.vue'),
   },
 };

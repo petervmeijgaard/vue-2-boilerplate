@@ -5,7 +5,6 @@
  * The routes and redirects are defined in this file
  */
 
-import loader from './utils/loader';
 
 /**
  * The routes
@@ -17,7 +16,7 @@ export default [
   {
     path: '/home',
     name: 'home.index',
-    component: loader.page('home', 'index'),
+    component: require('pages/home/index/index.vue'),
 
     // If the user needs to be authenticated to view this page
     meta: {
@@ -29,7 +28,7 @@ export default [
   {
     path: '/account',
     name: 'account.index',
-    component: loader.page('account', 'index'),
+    component: require('pages/account/index/index.vue'),
 
     // If the user needs to be authenticated to view this page
     meta: {
@@ -41,7 +40,7 @@ export default [
   {
     path: '/login',
     name: 'login.index',
-    component: loader.page('login', 'index'),
+    component: require('pages/login/index/index.vue'),
 
     // If the user needs to be a guest to view this page
     meta: {
@@ -53,7 +52,7 @@ export default [
   {
     path: '/register',
     name: 'register.index',
-    component: loader.page('register', 'index'),
+    component: require('pages/register/index/index.vue'),
 
     // If the user needs to be a guest to view this page
     meta: {

@@ -1,8 +1,13 @@
-import loader from './../../../utils/loader';
+/* ============
+ * Account Index Page
+ * ============
+ *
+ * Page where the user can view the account information
+ */
 
 export default {
   components: {
-    VLayout: loader.layout('default'),
-    VPanel: loader.component('panel'),
+    VLayout: require('layouts/default/default.vue'),
+    VPanel: require('components/panel/panel.vue'),
   },
 };

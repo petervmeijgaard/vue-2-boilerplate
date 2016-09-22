@@ -1,7 +1,7 @@
-var path = require('path');
-var config = require('../config');
-var utils = require('./utils');
-var projectRoot = path.resolve(__dirname, '../');
+var path = require('path')
+var config = require('../config')
+var utils = require('./utils')
+var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
@@ -17,8 +17,17 @@ module.exports = {
     fallback: [path.join(__dirname, '../node_modules')],
     alias: {
       'src': path.resolve(__dirname, '../src'),
+      'app': path.resolve(__dirname, '../src/app'),
       'assets': path.resolve(__dirname, '../src/assets'),
-      'components': path.resolve(__dirname, '../src/components')
+      'components': path.resolve(__dirname, '../src/app/components'),
+      'layouts': path.resolve(__dirname, '../src/app/layouts'),
+      'locale': path.resolve(__dirname, '../src/app/locale'),
+      'mixins': path.resolve(__dirname, '../src/app/mixins'),
+      'pages': path.resolve(__dirname, '../src/app/pages'),
+      'services': path.resolve(__dirname, '../src/app/services'),
+      'store': path.resolve(__dirname, '../src/app/store'),
+      'transformers': path.resolve(__dirname, '../src/app/transformers'),
+      'utils': path.resolve(__dirname, '../src/app/utils')
     }
   },
   resolveLoader: {
@@ -55,10 +64,6 @@ module.exports = {
         loader: 'json'
       },
       {
-        test: /\.html$/,
-        loader: 'vue-html'
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url',
         query: {
@@ -80,6 +85,11 @@ module.exports = {
     formatter: require('eslint-friendly-formatter')
   },
   vue: {
-    loaders: utils.cssLoaders()
+    loaders: utils.cssLoaders(),
+    postcss: [
+      require('autoprefixer')({
+        browsers: ['last 2 versions']
+      })
+    ]
   }
-};
+}
