@@ -9,7 +9,7 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import createLogger from 'vuex/logger';
+import createLogger from 'vuex/dist/logger';
 import * as actions from './actions';
 import * as getters from './getters';
 
