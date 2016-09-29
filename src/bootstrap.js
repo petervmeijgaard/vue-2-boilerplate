@@ -77,21 +77,21 @@ Vue.use(VueRouter);
 export const router = new VueRouter({
   routes,
 });
-router.beforeEach((route, redirect, next) => {
-  if (route.matched.some(m => m.meta.auth) && !store.state.auth.authenticated) {
+router.beforeEach((toRoute, fromRoute, next) => {
+  if (toRoute.matched.some(m => m.meta.auth) && !store.state.auth.authenticated) {
     /*
      * If the user is not authenticated and visits
      * a page that requires authentication, redirect to the login page
      */
-    redirect({
+    next({
       name: 'login.index',
     });
-  } else if (route.matched.some(m => m.meta.guest) && store.state.auth.authenticated) {
+  } else if (toRoute.matched.some(m => m.meta.guest) && store.state.auth.authenticated) {
     /*
      * If the user is authenticated and visits
      * an guest page, redirect to the dashboard page
      */
-    redirect({
+    next({
       name: 'account.show',
     });
   } else {
