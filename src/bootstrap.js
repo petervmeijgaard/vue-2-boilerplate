@@ -116,7 +116,7 @@ import locale from './app/locale';
 
 Vue.use(VueI18n);
 
-Vue.config.lang = 'nl';
+Vue.config.lang = 'en';
 
 Object.keys(locale).forEach((lang) => {
   Vue.locale(lang, locale[lang]);
