@@ -64,6 +64,7 @@ It will load:
  - vue
  - vue-resource
  - vue-router
+ - vue-i18n
  - vuex
  - bootstrap
  - jquery
