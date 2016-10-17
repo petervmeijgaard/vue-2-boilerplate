@@ -22,6 +22,6 @@ export default {
   [LOGOUT](state) {
     state.authenticated = false;
     localStorage.removeItem('id_token');
-    Vue.http.headers.common.Authorization = null;
+    Vue.http.headers.common.Authorization = '';
   },
 };
