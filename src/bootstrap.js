@@ -92,7 +92,7 @@ router.beforeEach((to, from, next) => {
      * an guest page, redirect to the dashboard page
      */
     next({
-      name: 'account.show',
+      name: 'home.index',
     });
   } else {
     next();
