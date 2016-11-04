@@ -43,7 +43,7 @@ export default new Vuex.Store({
   /**
    * If strict mode should be enabled
    */
-  strict: false,
+  strict: debug,
 
   /**
    * Plugins used in the store

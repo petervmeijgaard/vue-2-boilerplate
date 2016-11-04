@@ -1,8 +1,8 @@
 /* ============
- * Account Index Page
+ * Account Update Page
  * ============
  *
- * Page where the user can view the account information
+ * Page where the user can update the account information
  */
 import accountService from '../../../services/account'
 

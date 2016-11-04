@@ -1,9 +1,12 @@
 import Vue from 'vue';
-// import store from './../../store';
+import store from './../../store';
+import { updateAccount } from './../../store/actions';
 
 // When the request succeeds
-const success = () => {
+const success = (account) => {
   // store.dispatch('login', token);
+  updateAccount(store, account);
+
   Vue.router.push({
     name: 'account.index',
   });
@@ -29,6 +32,6 @@ export default (account) => {
   if (!account.email || !account.firstName || !account.lastName) {
     failed();
   } else {
-    success('account');
+    success(account);
   }
 };

@@ -36,7 +36,7 @@ export default [
     },
   },
   {
-    path: '/account_update',
+    path: '/account/update',
     name: 'account.update',
     component: require('pages/account/update/index.vue'),
 
