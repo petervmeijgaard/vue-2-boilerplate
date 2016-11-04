@@ -35,6 +35,16 @@ export default [
       auth: true,
     },
   },
+  {
+    path: '/account_update',
+    name: 'account.update',
+    component: require('pages/account/update/index.vue'),
+
+    // If the user needs to be authenticated to view this page
+    meta: {
+      auth: true,
+    },
+  },
 
   // Login
   {

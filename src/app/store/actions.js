@@ -11,6 +11,9 @@ import * as types from './mutation-types';
 export const getAccount = ({ commit }, account) => {
   commit(types.GET_ACCOUNT, account);
 };
+export const updateAccount = ({ commit }, account) => {
+  commit(types.UPDATE_ACCOUNT, account);
+};
 
 // Auth
 export const login = ({ commit }, token) => {
