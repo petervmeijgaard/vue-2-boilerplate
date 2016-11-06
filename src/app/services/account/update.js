@@ -1,11 +1,9 @@
 import Vue from 'vue';
 import store from './../../store';
-import { updateAccount } from './../../store/actions';
 
 // When the request succeeds
 const success = (account) => {
-  // store.dispatch('login', token);
-  updateAccount(store, account);
+  store.dispatch('updateAccount', account);
 
   Vue.router.push({
     name: 'account.index',

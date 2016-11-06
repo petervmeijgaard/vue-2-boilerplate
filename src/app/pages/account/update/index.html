@@ -7,23 +7,23 @@
     </h1>
     <div slot="body">
 
-        <form @submit.prevent="update(user)">
+        <form @submit.prevent="updateAccount">
 
           <div class="form-group">
             <label for="firstName">First Name</label>
-            <input type="text" name="firstName" id="firstName" v-model="user.firstName" class="form-control">
+            <input type="text" name="firstName" id="firstName" :value="account.firstName" class="form-control">
           </div>
 
 
           <div class="form-group">
             <label for="lastName">Last Name</label>
-            <input type="text" name="lastName" id="lastName" v-model="user.lastName" class="form-control">
+            <input type="text" name="lastName" id="lastName" :value="account.lastName" class="form-control">
           </div>
 
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" v-model="user.email" class="form-control">
+            <input type="email" name="email" id="email" :value="account.email" class="form-control">
           </div>
 
           <div class="form-group">

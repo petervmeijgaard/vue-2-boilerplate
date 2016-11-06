@@ -5,17 +5,29 @@
  * Page where the user can update the account information
  */
 import accountService from '../../../services/account'
+import store from '../../../store/modules/account'
 
 
 export default {
- data() {
-    return {
-      user: this.$store.state.account
+  computed: {
+    account: {
+      get () {
+        return store.state;
+      },
+      set (account) {
+        accountService.update(account);
+      }
     }
   },
   methods: {
-    update(user) {
-      accountService.update(user);
+    updateAccount(e) {
+      // for more complex forms: https://github.com/defunctzombie/form-serialize
+      var data = {};
+      var inputs = [].slice.call(e.target.getElementsByTagName('input'));
+      inputs.forEach(input => {
+        data[input.name] = input.value;
+      });
+      accountService.update(data);
     },
   },
   components: {
