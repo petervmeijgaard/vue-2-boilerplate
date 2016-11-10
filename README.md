@@ -62,10 +62,10 @@ So there are a couple of important files that needs to be addressed:
 This file will bootstrap the application.
 It will load:
  - vue
- - vue-resource
  - vue-router
  - vue-i18n
  - vuex
+ - axion
  - bootstrap
  - jquery
  - font-awesome

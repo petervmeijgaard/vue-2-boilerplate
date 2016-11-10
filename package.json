@@ -32,13 +32,13 @@
   },
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
+    "axios": "^0.15.2",
     "babel-runtime": "^6.0.0",
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.6.3",
     "jquery": "^3.1.0",
     "vue": "^2.0.3",
     "vue-i18n": "^4.6.0",
-    "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1",
     "vuex": "^2.0.0",
     "vuex-router-sync": "^3.0.0"
