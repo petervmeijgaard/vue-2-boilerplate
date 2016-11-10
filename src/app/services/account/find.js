@@ -18,7 +18,7 @@ export default () => {
    * But to get the example working, the data is hardcoded.
    *
    * With the include REST-client Axios, you can do something like this:
-   * Vue.http.get('/account')
+   * Vue.$http.get('/account')
    *   .then((response) => {
    *     success(response);
    *   })
