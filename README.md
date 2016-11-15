@@ -65,7 +65,7 @@ It will load:
  - vue-router
  - vue-i18n
  - vuex
- - axion
+ - axios
  - bootstrap
  - jquery
  - font-awesome
