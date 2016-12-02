@@ -41,6 +41,7 @@ Axios.interceptors.response.use(
     if (error.response.status === 401) {
       authService.logout();
     }
+    return Promise.reject(error);
   });
 Vue.$http = Axios;
 
