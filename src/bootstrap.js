@@ -19,31 +19,40 @@ import Vue from 'vue';
 
 Vue.config.debug = process.env.NODE_ENV !== 'production';
 
+const bus = new Vue();
+
+// Bind the event bus to Vue.
+Vue.$bus = bus;
+Object.defineProperty(Vue.prototype, '$bus', {
+  get() {
+    return bus;
+  },
+});
+
 
 /* ============
- * Vue Resource
+ * Axios
  * ============
  *
- * Vue Resource provides services for making web requests and handle
- * responses using a XMLHttpRequest or JSONP.
+ * Promise based HTTP client for the browser and node.js.
+ * Because Vue Resource has been retired, Axios will now been used
+ * to perform AJAX-requests.
  *
- * https://github.com/vuejs/vue-resource/tree/master/docs
+ * https://github.com/mzabriskie/axios
  */
-import VueResource from 'vue-resource';
+import Axios from 'axios';
 import authService from './app/services/auth';
 
-Vue.use(VueResource);
-
-Vue.http.headers.common.Accept = 'application/json';
-Vue.http.options.root = process.env.API_LOCATION;
-Vue.http.interceptors.push((request, next) => {
-  next((response) => {
-    // When the token is invalid, log the user out
-    if (response.status === 401) {
+Axios.defaults.baseURL = process.env.API_LOCATION;
+Axios.defaults.headers.common.Accept = 'application/json';
+Axios.interceptors.response.use(
+  response => response,
+  (error) => {
+    if (error.response.status === 401) {
       authService.logout();
     }
   });
-});
+Vue.$http = Axios;
 
 
 /* ============
