@@ -53,6 +53,11 @@ Axios.interceptors.response.use(
     }
   });
 Vue.$http = Axios;
+Object.defineProperty(Vue.prototype, '$http', {
+  get() {
+    return Axios;
+  },
+});
 
 
 /* ============
