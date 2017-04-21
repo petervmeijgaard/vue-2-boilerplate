@@ -1,0 +1,40 @@
+<v-layout>
+  <v-panel contextual-style="primary">
+    <h1 class="panel-title"
+        slot="heading"
+    >
+      My Account Update
+    </h1>
+    <div slot="body">
+
+        <form @submit.prevent="updateAccount">
+
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" id="firstName" :value="account.firstName" class="form-control">
+          </div>
+
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="lastName" id="lastName" :value="account.lastName" class="form-control">
+          </div>
+
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" :value="account.email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Update my account</button>
+          </div>
+
+        </form>
+
+    </div>
+    <div slot="footer">
+      Made with love by Vivid Web
+    </div>
+  </v-panel>
+</v-layout>
