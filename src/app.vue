@@ -12,7 +12,7 @@
    */
 
   import store from './store';
-  import { router } from './bootstrap';
+  import { router, i18n } from './bootstrap';
   import accountService from './services/account';
 
   export default {
@@ -25,6 +25,11 @@
      * The router
      */
     router,
+
+    /**
+     * The localization plugin
+     */
+    i18n,
 
     /**
      * Fires when the app has been mounted

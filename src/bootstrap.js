@@ -127,14 +127,14 @@ Vue.router = router;
  * https://kazupon.github.io/vue-i18n/
  */
 import VueI18n from 'vue-i18n';
-import locale from './locale';
+import messages from './locale';
 
 Vue.use(VueI18n);
 
-Vue.config.lang = 'en';
-
-Object.keys(locale).forEach((lang) => {
-  Vue.locale(lang, locale[lang]);
+export const i18n = new VueI18n({
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages,
 });
 
 
@@ -194,4 +194,5 @@ require('./assets/stylus/app.styl');
 
 export default {
   router,
+  i18n,
 };
