@@ -2,7 +2,7 @@
  * Bootstrap File
  * ============
  *
- * Will configure and bootstrap the application
+ * Will configure and bootstrap the application.
  */
 
 
@@ -41,7 +41,7 @@ Object.defineProperty(Vue.prototype, '$bus', {
  * https://github.com/mzabriskie/axios
  */
 import Axios from 'axios';
-import authService from './app/services/auth';
+import authService from '@/services/auth';
 
 Axios.defaults.baseURL = process.env.API_LOCATION;
 Axios.defaults.headers.common.Accept = 'application/json';
@@ -52,6 +52,7 @@ Axios.interceptors.response.use(
       authService.logout();
     }
   });
+
 Vue.$http = Axios;
 Object.defineProperty(Vue.prototype, '$http', {
   get() {
@@ -69,9 +70,9 @@ Object.defineProperty(Vue.prototype, '$http', {
  * https://github.com/vuejs/vuex-router-sync/blob/master/README.md
  */
 import VuexRouterSync from 'vuex-router-sync';
-import store from './app/store';
+import store from './store';
 
-store.dispatch('checkAuthentication');
+store.dispatch('auth/check');
 
 
 /* ============
@@ -84,7 +85,7 @@ store.dispatch('checkAuthentication');
  * http://router.vuejs.org/en/index.html
  */
 import VueRouter from 'vue-router';
-import routes from './app/routes';
+import routes from './routes';
 
 Vue.use(VueRouter);
 
@@ -121,12 +122,12 @@ Vue.router = router;
  * Vue i18n
  * ============
  *
- * Internationalization plugin of Vue.js
+ * Internationalization plugin of Vue.js.
  *
  * https://kazupon.github.io/vue-i18n/
  */
 import VueI18n from 'vue-i18n';
-import locale from './app/locale';
+import locale from './locale';
 
 Vue.use(VueI18n);
 
@@ -154,7 +155,7 @@ window.$ = window.jQuery = jQuery;
  * Bootstrap
  * ============
  *
- * Require bootstrap
+ * Require bootstrap.
  *
  * http://getbootstrap.com/
  */
@@ -166,7 +167,7 @@ require('bootstrap/less/bootstrap.less');
  * Font Awesome
  * ============
  *
- * Require font-awesome
+ * Require font-awesome.
  *
  * http://http://fontawesome.io/
  */

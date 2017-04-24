@@ -2,8 +2,9 @@
  * Main File
  * ============
  *
- * Will initialize the application
+ * Will initialize the application.
  */
+
 import Vue from 'vue';
 import * as App from './app';
 
