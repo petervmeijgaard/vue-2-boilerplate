@@ -19,16 +19,6 @@ import Vue from 'vue';
 
 Vue.config.debug = process.env.NODE_ENV !== 'production';
 
-const bus = new Vue();
-
-// Bind the event bus to Vue.
-Vue.$bus = bus;
-Object.defineProperty(Vue.prototype, '$bus', {
-  get() {
-    return bus;
-  },
-});
-
 
 /* ============
  * Axios
