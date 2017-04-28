@@ -83,7 +83,7 @@ This file will load the page inside the `router-view`-component.
 It will check if the user is authenticated and load the resources accordingly.
 
 ## Structure ##
-Inside the `src/app`-directory, are a couple directories that needs to be addressed:
+Inside the `src`-directory, are a couple directories that needs to be addressed:
 
 ### Components ###
 Your components will be placed inside this directory.
@@ -106,7 +106,7 @@ This mixin will add the `hasSlot()`-method to all the components it is used in.
 
 ### Pages ###
 The pages/views are placed inside this directory.
-By default it comes with an `account/index`, `home/index`, `login/index` and a `register/index` page,
+By default it comes with an `account/index.vue`, `home/index.vue`, `login/index.vue` and a `register/index.vue` page,
 but feel free to add more.
 
 ### Services ###
@@ -144,7 +144,6 @@ So given the previous example, using a transformer, it will look something like 
 ### Utils ###
 Last but not least we get an `utils`-directory.
 Here you can place handy utils you want to use inside your application.
-Out of the box it comes with a `loader`-util which will prevent the relative directory hell.
 
 ## Got questions or improvements? ##
 Feel free to hit me up on:
@@ -162,7 +161,7 @@ Make something awesome!
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Peter van Meijgaard
+Copyright (c) 2016 - 2017 Peter van Meijgaard
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
