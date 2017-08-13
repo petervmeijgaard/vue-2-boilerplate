@@ -48,6 +48,15 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
 
+- `npm run unit`: start the Karma Test Runner.
+  - Unit Tests are provided by Karma, Mocha, Chai and Sinon-Chai.
+  - The testing files should be place under **test/unit/specs**.
+  - Make sure every test file ends in `.spec.js`
+
+- `npm run e2e`: start the Nightwatch Test Runner.
+  - End to End (e2e) Tests are provided by Nightwatch, Selenium and PhantomJS.
+  - The testing files should be place under **test/e2e/specs**.
+
 ## Other tools ##
 ### Scaffolding ###
 For quickly scaffolding components, pages, layouts and more, install the [Vueture CLI tool](https://github.com/vueture/vueture-cli).
