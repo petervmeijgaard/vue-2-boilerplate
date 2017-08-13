@@ -151,8 +151,13 @@ So given the previous example, using a transformer, it will look something like 
 ```
 
 ### Utils ###
-Last but not least we get an `utils`-directory.
 Here you can place handy utils you want to use inside your application.
+
+### Test ###
+Both the Unit Tests and the End-2-End Tests are within the `test/` folder.
+Unit Tests should go inside the `test/unit/specs` folder.
+E2e Tests should go inside the `test/e2e/specs` folder.
+You can read more about both test on the [Webpack Boilerplate Testing Session](http://vuejs-templates.github.io/webpack/unit.html).
 
 ## Got questions or improvements? ##
 Feel free to hit me up on:
