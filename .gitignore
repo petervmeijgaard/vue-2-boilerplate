@@ -4,3 +4,4 @@ dist/
 npm-debug.log
 yarn-error.log
 coverage/
+test/e2e/reports
