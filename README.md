@@ -48,6 +48,15 @@ For more information, visit the [docs](http://vuejs-templates.github.io/webpack/
   - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
   - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
 
+- `npm run unit`: start the Karma Test Runner.
+  - Unit Tests are provided by Karma, Mocha, Chai and Sinon-Chai.
+  - The testing files should be place under **test/unit/specs**.
+  - Make sure every test file ends in `.spec.js`
+
+- `npm run e2e`: start the Nightwatch Test Runner.
+  - End to End (e2e) Tests are provided by Nightwatch, Selenium and PhantomJS.
+  - The testing files should be place under **test/e2e/specs**.
+
 ## Other tools ##
 ### Scaffolding ###
 For quickly scaffolding components, pages, layouts and more, install the [Vueture CLI tool](https://github.com/vueture/vueture-cli).
@@ -142,8 +151,13 @@ So given the previous example, using a transformer, it will look something like 
 ```
 
 ### Utils ###
-Last but not least we get an `utils`-directory.
 Here you can place handy utils you want to use inside your application.
+
+### Test ###
+Both the Unit Tests and the End-2-End Tests are within the `test/` folder.
+Unit Tests should go inside the `test/unit/specs` folder.
+E2e Tests should go inside the `test/e2e/specs` folder.
+You can read more about both test on the [Webpack Boilerplate Testing Session](http://vuejs-templates.github.io/webpack/unit.html).
 
 ## Got questions or improvements? ##
 Feel free to hit me up on:
