@@ -9,7 +9,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
-var env = config.build.env
+var env = {{#if_or unit e2e}}process.env.NODE_ENV === 'testing'
+  ? require('../config/test.env')
+  : {{/if_or}}config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
   module: {
