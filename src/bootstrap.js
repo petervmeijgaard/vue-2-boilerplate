@@ -129,19 +129,6 @@ export const i18n = new VueI18n({
 
 
 /* ============
- * jQuery
- * ============
- *
- * Require jQuery
- *
- * http://jquery.com/
- */
-import jQuery from 'jquery';
-
-window.$ = window.jQuery = jQuery;
-
-
-/* ============
  * Bootstrap
  * ============
  *
@@ -149,8 +136,7 @@ window.$ = window.jQuery = jQuery;
  *
  * http://getbootstrap.com/
  */
-require('bootstrap');
-require('bootstrap/less/bootstrap.less');
+require('bootstrap/dist/css/bootstrap.css');
 
 
 /* ============
@@ -161,7 +147,7 @@ require('bootstrap/less/bootstrap.less');
  *
  * http://http://fontawesome.io/
  */
-require('font-awesome/less/font-awesome.less');
+require('font-awesome/css/font-awesome.css');
 
 
 /* ============

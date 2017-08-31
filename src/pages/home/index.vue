@@ -1,11 +1,9 @@
 <template>
   <v-layout>
-    <v-panel
-      contextual-style="primary"
-    >
-      <h1 class="panel-title" slot="heading">
+    <v-card contextual-style="dark">
+      <span slot="header">
         Welcome!
-      </h1>
+      </span>
       <div slot="body">
         <p>
           Get started with the Vue 2 boilerplate
@@ -14,31 +12,61 @@
           For questions, contact me:
         </p>
         <p>
-          <a class="btn btn-primary" href="http://gitter.im/petervmeijgaard" target="_blank">
-            <i class="fa fa-github fa-fw" aria-hidden="true"></i>
-            <span class="padding-left">Gitter</span>
+          <a
+            class="btn btn-outline-primary"
+            href="http://gitter.im/petervmeijgaard"
+            target="_blank"
+          >
+            <i
+              class="fa fa-github fa-fw"
+              aria-hidden="true"
+            ></i>
+            <span class="padding-left">
+              Gitter
+            </span>
           </a>
-          <a class="btn btn-primary" href="http://github.com/petervmeijgaard" target="_blank">
-            <i class="fa fa-github fa-fw" aria-hidden="true"></i>
-            <span class="padding-left">GitHub</span>
+          <a
+            class="btn btn-outline-primary"
+            href="http://github.com/petervmeijgaard"
+            target="_blank"
+          >
+            <i
+              class="fa fa-github fa-fw"
+              aria-hidden="true"
+            ></i>
+            <span class="padding-left">
+              GitHub
+            </span>
           </a>
-          <a class="btn btn-primary" href="http://twitter.com/petervmeijgaard" target="_blank">
+          <a
+            class="btn btn-outline-primary"
+            href="http://twitter.com/petervmeijgaard"
+            target="_blank"
+          >
             <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
-            <span class="padding-left">Twitter</span>
+            <span class="padding-left">
+              Twitter
+            </span>
           </a>
         </p>
         <p>
           For bugs, see:
         </p>
-        <a class="btn btn-primary" href="https://github.com/petervmeijgaard/vue-2.0-boilerplate/issues" target="_blank">
+        <a
+          class="btn btn-outline-primary"
+          href="https://github.com/petervmeijgaard/vue-2.0-boilerplate/issues"
+          target="_blank"
+        >
           <i class="fa fa-github fa-fw" aria-hidden="true"></i>
-          <span class="padding-left">GitHub</span>
+          <span class="padding-left">
+            GitHub
+          </span>
         </a>
       </div>
       <div slot="footer">
         Made with love by Vivid Web
       </div>
-    </v-panel>
+    </v-card>
   </v-layout>
 </template>
 
@@ -51,9 +79,17 @@
    */
 
   export default {
+    /**
+     * The name of the page.
+     */
+    name: 'home-index',
+
+    /**
+     * The components that the page can use.
+     */
     components: {
       VLayout: require('@/layouts/default.vue'),
-      VPanel: require('@/components/panel.vue'),
+      VCard: require('@/components/card.vue'),
     },
   };
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
+    <div class="row justify-content-center">
+      <div class="col col-6">
         <!-- Content will be placed here -->
         <slot></slot>
       </div>
@@ -20,5 +20,10 @@
    * This way the app stays clean.
    */
 
-  export default {};
+  export default {
+    /**
+     * The name of the layout.
+     */
+    name: 'minimal-layout',
+  };
 </script>

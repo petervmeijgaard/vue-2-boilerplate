@@ -6,7 +6,7 @@
  */
 
 import Vue from 'vue';
-import * as App from './app';
+import App from './app';
 
 require('./bootstrap');
 

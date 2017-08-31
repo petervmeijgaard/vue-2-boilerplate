@@ -8,6 +8,9 @@
  */
 
 export default {
+  /**
+   * The methods that the mixin will add.
+   */
   methods: {
     /**
      * Method used to check if a Vue component has a slot

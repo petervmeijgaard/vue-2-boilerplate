@@ -1,61 +1,62 @@
 <template>
   <div>
-    <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <router-link
-            class="navbar-brand"
-            :to="{ name: 'home.index' }"
-          >
-            My App
-          </router-link>
-        </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <router-link
+        class="navbar-brand"
+        :to="{ name: 'home.index' }"
+      >
+        Vue 2 Boilerplate
+      </router-link>
 
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav">
-            <router-link
-              :to="{ name: 'home.index' }"
-              active-class="active"
-              class="nav-item"
-              tag="li"
-            >
-              <a>
-                Home
-              </a>
-            </router-link>
-          </ul>
-          <ul class="nav navbar-nav">
-            <router-link
-              :to="{ name: 'account.index' }"
-              active-class="active"
-              class="nav-item"
-              tag="li"
-            >
-              <a>
-                Account
-              </a>
-            </router-link>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#" @click.prevent="logout">
-                <i class="fa fa-sign-out"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        @click="toggleMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse"
+        :class="{ show : menuCollapsed}"
+      >
+        <ul class="navbar-nav mr-auto">
+          <router-link
+            :to="{ name: 'home.index' }"
+            active-class="active"
+            class="nav-item"
+            tag="li"
+          >
+            <a class="nav-link">
+              Home
+            </a>
+          </router-link>
+          <router-link
+            :to="{ name: 'account.index' }"
+            active-class="active"
+            class="nav-item"
+            tag="li"
+          >
+            <a class="nav-link">
+              Account
+            </a>
+          </router-link>
+        </ul>
+        <span class="navbar-text">
+          <a
+            class="btn btn-light"
+            href="#"
+            @click.prevent="logout"
+          >
+            <i class="fa fa-sign-out"></i>
+          </a>
+        </span>
       </div>
     </nav>
 
-    <div class="container">
+    <div class="container pt-4">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col col-12">
           <!-- Content will be placed here -->
           <slot></slot>
         </div>
@@ -79,11 +80,34 @@
   import authService from '@/services/auth';
 
   export default {
+    /**
+     * The name of the layout.
+     */
+    name: 'default-layout',
+
+    data() {
+      return {
+        menuCollapsed: false,
+      };
+    },
+
+    /**
+     * The methods that the layout can use.
+     */
     methods: {
+      /**
+       * Will log the user out.
+       */
       logout() {
         authService.logout();
       },
+
+      /**
+       * Will toggle the menu.
+       */
+      toggleMenu() {
+        this.menuCollapsed = !this.menuCollapsed;
+      },
     },
   };
-
 </script>

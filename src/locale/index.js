@@ -2,7 +2,7 @@
  * Locale
  * ============
  *
- * For a multilanguage application, you can
+ * For a multi-language application, you can
  * specify the languages you want to use here.
  */
 

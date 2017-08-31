@@ -1,9 +1,9 @@
 <template>
   <v-layout>
-    <v-panel contextual-style="primary">
-      <h1 class="panel-title" slot="heading">
+    <v-card contextual-style="dark">
+      <span slot="header">
         Login
-      </h1>
+      </span>
       <div slot="body">
         <form @submit.prevent="login(user)">
           <div class="form-group">
@@ -33,7 +33,7 @@
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-primary">
+            <button class="btn btn-outline-primary">
               Login
             </button>
           </div>
@@ -43,7 +43,7 @@
         No account?
         <router-link :to="{ name: 'register.index' }">Register</router-link>
       </div>
-    </v-panel>
+    </v-card>
   </v-layout>
 </template>
 
@@ -57,6 +57,16 @@
   import authService from '@/services/auth';
 
   export default {
+    /**
+     * The name of the page.
+     */
+    name: 'login-index',
+
+    /**
+     * The data that can be used by the page.
+     *
+     * @returns {Object} The view-model data.
+     */
     data() {
       return {
         user: {
@@ -66,15 +76,26 @@
       };
     },
 
+    /**
+     * The methods the page can use.
+     */
     methods: {
+      /**
+       * Will log the user in.
+       *
+       * @param {Object} user The user to be logged in.
+       */
       login(user) {
         authService.login(user);
       },
     },
 
+    /**
+     * The components the page can use.
+     */
     components: {
       VLayout: require('@/layouts/minimal.vue'),
-      VPanel: require('@/components/panel.vue'),
+      VCard: require('@/components/card.vue'),
     },
   };
 </script>

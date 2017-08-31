@@ -1,11 +1,9 @@
 <template>
   <v-layout>
-    <v-panel contextual-style="primary">
-      <h1 class="panel-title"
-          slot="heading"
-      >
+    <v-card contextual-style="dark">
+      <span slot="header">
         My Account
-      </h1>
+      </span>
       <div slot="body">
         <table class="table table-striped">
           <thead>
@@ -39,7 +37,7 @@
       <div slot="footer">
         Made with love by Vivid Web
       </div>
-    </v-panel>
+    </v-card>
   </v-layout>
 </template>
 
@@ -52,9 +50,17 @@
    */
 
   export default {
+    /**
+     * The name of the page.
+     */
+    name: 'account-index',
+
+    /**
+     * The components that the page can use.
+     */
     components: {
       VLayout: require('@/layouts/default.vue'),
-      VPanel: require('@/components/panel.vue'),
+      VCard: require('@/components/card.vue'),
     },
   };
 </script>
