@@ -59,10 +59,12 @@ export default [
       guest: true,
     },
   },
+
   {
     path: '/',
     redirect: '/home',
   },
+
   {
     path: '/*',
     redirect: '/home',

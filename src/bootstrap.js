@@ -29,7 +29,7 @@ import Vue from 'vue';
  * https://github.com/mzabriskie/axios
  */
 import Axios from 'axios';
-import authService from '@/services/auth';
+import store from './store';
 
 Axios.defaults.baseURL = process.env.API_LOCATION;
 Axios.defaults.headers.common.Accept = 'application/json';
@@ -37,7 +37,7 @@ Axios.interceptors.response.use(
   response => response,
   (error) => {
     if (error.response.status === 401) {
-      authService.logout();
+      store.dispatch('auth/logout');
     }
   });
 
@@ -58,7 +58,6 @@ Object.defineProperty(Vue.prototype, '$http', {
  * https://github.com/vuejs/vuex-router-sync/blob/master/README.md
  */
 import VuexRouterSync from 'vuex-router-sync';
-import store from './store';
 
 store.dispatch('auth/check');
 
