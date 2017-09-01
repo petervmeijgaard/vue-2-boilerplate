@@ -85,6 +85,11 @@
      */
     name: 'default-layout',
 
+    /**
+     * The data that can be used by the page.
+     *
+     * @returns {Object} The view-model data.
+     */
     data() {
       return {
         menuCollapsed: false,

@@ -62,7 +62,7 @@
     computed: {
       /**
        * Computed property which will compute the classes
-       * for the header of the card
+       * for the header of the card.
        *
        * @returns {Array} The classes for the header.
        */

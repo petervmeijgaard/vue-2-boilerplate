@@ -76,7 +76,6 @@ It will load:
  - vuex
  - axios
  - bootstrap
- - jquery
  - font-awesome
 
 Don't like one of those packages?

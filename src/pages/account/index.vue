@@ -49,6 +49,9 @@
    * Page where the user can view the account information.
    */
 
+  import VLayout from '@/layouts/default';
+  import VCard from '@/components/card';
+
   export default {
     /**
      * The name of the page.
@@ -59,8 +62,8 @@
      * The components that the page can use.
      */
     components: {
-      VLayout: require('@/layouts/default.vue'),
-      VCard: require('@/components/card.vue'),
+      VLayout,
+      VCard,
     },
   };
 </script>

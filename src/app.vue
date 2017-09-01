@@ -17,22 +17,27 @@
 
   export default {
     /**
-     * The Vuex store
+     * The name of the application.
+     */
+    name: 'vue-boilerplate',
+
+    /**
+     * The Vuex store.
      */
     store,
 
     /**
-     * The router
+     * The router.
      */
     router,
 
     /**
-     * The localization plugin
+     * The localization plugin.
      */
     i18n,
 
     /**
-     * Fires when the app has been mounted
+     * Fires when the app has been mounted.
      */
     mounted() {
       // If the user is authenticated,

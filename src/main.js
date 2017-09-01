@@ -7,7 +7,10 @@
 
 import Vue from 'vue';
 import App from './app';
+import './bootstrap';
 
-require('./bootstrap');
+Vue.config.productionTip = false;
 
-new Vue(App).$mount('#app');
+new Vue({
+  render: h => h(App),
+}).$mount('#app');

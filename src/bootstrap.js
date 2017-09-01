@@ -17,8 +17,6 @@
  */
 import Vue from 'vue';
 
-Vue.config.debug = process.env.NODE_ENV !== 'production';
-
 
 /* ============
  * Axios
@@ -132,40 +130,40 @@ export const i18n = new VueI18n({
  * Bootstrap
  * ============
  *
- * Require bootstrap.
+ * Import bootstrap.
  *
  * http://getbootstrap.com/
  */
-require('bootstrap/dist/css/bootstrap.css');
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 /* ============
  * Font Awesome
  * ============
  *
- * Require font-awesome.
+ * Import font-awesome.
  *
  * http://http://fontawesome.io/
  */
-require('font-awesome/css/font-awesome.css');
+import 'font-awesome/css/font-awesome.css';
 
 
 /* ============
  * Styling
  * ============
  *
- * Require the application styling.
+ * Import the application styling.
  * Stylus is used for this boilerplate.
  *
  * If you don't want to use Stylus, that's fine!
  * Replace the stylus directory with the CSS preprocessor you want.
- * Require the entry point here & install the webpack loader.
+ * Import the entry point here & install the webpack loader.
  *
  * It's that easy...
  *
  * http://stylus-lang.com/
  */
-require('./assets/stylus/app.styl');
+import './assets/stylus/app.styl';
 
 
 export default {

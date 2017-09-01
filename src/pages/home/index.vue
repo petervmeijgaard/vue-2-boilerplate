@@ -21,7 +21,7 @@
               class="fa fa-github fa-fw"
               aria-hidden="true"
             ></i>
-            <span class="padding-left">
+            <span class="pl-2">
               Gitter
             </span>
           </a>
@@ -34,7 +34,7 @@
               class="fa fa-github fa-fw"
               aria-hidden="true"
             ></i>
-            <span class="padding-left">
+            <span class="pl-2">
               GitHub
             </span>
           </a>
@@ -44,7 +44,7 @@
             target="_blank"
           >
             <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
-            <span class="padding-left">
+            <span class="pl-2">
               Twitter
             </span>
           </a>
@@ -58,7 +58,7 @@
           target="_blank"
         >
           <i class="fa fa-github fa-fw" aria-hidden="true"></i>
-          <span class="padding-left">
+          <span class="pl-2">
             GitHub
           </span>
         </a>
@@ -78,6 +78,9 @@
    * The home index page.
    */
 
+  import VLayout from '@/layouts/default';
+  import VCard from '@/components/card';
+
   export default {
     /**
      * The name of the page.
@@ -88,8 +91,8 @@
      * The components that the page can use.
      */
     components: {
-      VLayout: require('@/layouts/default.vue'),
-      VCard: require('@/components/card.vue'),
+      VLayout,
+      VCard,
     },
   };
 </script>

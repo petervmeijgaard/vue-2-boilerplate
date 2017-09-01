@@ -55,6 +55,8 @@
    * Page where the user can login.
    */
   import authService from '@/services/auth';
+  import VLayout from '@/layouts/minimal';
+  import VCard from '@/components/card';
 
   export default {
     /**
@@ -94,8 +96,8 @@
      * The components the page can use.
      */
     components: {
-      VLayout: require('@/layouts/minimal.vue'),
-      VCard: require('@/components/card.vue'),
+      VLayout,
+      VCard,
     },
   };
 </script>

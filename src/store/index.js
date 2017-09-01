@@ -21,7 +21,7 @@ const debug = process.env.NODE_ENV !== 'production';
 
 export default new Vuex.Store({
   /**
-   * Assign the modules to the store
+   * Assign the modules to the store.
    */
   modules: {
     account,
@@ -29,12 +29,12 @@ export default new Vuex.Store({
   },
 
   /**
-   * If strict mode should be enabled
+   * If strict mode should be enabled.
    */
   strict: debug,
 
   /**
-   * Plugins used in the store
+   * Plugins used in the store.
    */
   plugins: debug ? [createLogger()] : [],
 });
