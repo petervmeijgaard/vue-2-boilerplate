@@ -9,6 +9,7 @@
 import Vue from 'vue';
 import {
   CHECK,
+  REGISTER,
   LOGIN,
   LOGOUT,
 } from './mutation-types';
@@ -19,6 +20,10 @@ export default {
     if (state.authenticated) {
       Vue.$http.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('id_token')}`;
     }
+  },
+
+  [REGISTER]() {
+    //
   },
 
   [LOGIN](state, token) {

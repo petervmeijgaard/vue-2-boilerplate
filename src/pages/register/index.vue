@@ -94,7 +94,6 @@
    * Page where the user can register.
    */
 
-  import authService from '@/services/auth';
   import VLayout from '@/layouts/minimal';
   import VCard from '@/components/card';
 
@@ -131,7 +130,7 @@
        * @param {Object} user The user to be registered.
        */
       register(user) {
-        authService.register(user);
+        this.$store.dispatch('auth/register', user);
       },
     },
 

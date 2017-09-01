@@ -117,10 +117,12 @@ The pages/views are placed inside this directory.
 By default it comes with an `account/index.vue`, `home/index.vue`, `login/index.vue` and a `register/index.vue` page,
 but feel free to add more.
 
-### Services ###
-You can compare services with controllers.
-They connect with external services, like an API, and call actions on the store.
-Normally you would perform AJAX-requests from the services, but to get the example working, the data is hardcoded.
+### Proxies ###
+Proxies are used to perform AJAX-requests.
+This boilerplate comes with a base proxy which can be used to make performing AJAX-requests easy.
+Create a new proxy, for example UserProxy, and extend the Proxy.
+This way you've got access to the all, find, update, create and destroy methods.
+For more information about how to use a proxy, take a look at the AccountProxy or AuthProxy.
 
 ### Store ###
 As mentioned before, Vuex is used as a single point of truth.

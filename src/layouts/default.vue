@@ -77,8 +77,6 @@
    * This way the app stays clean.
    */
 
-  import authService from '@/services/auth';
-
   export default {
     /**
      * The name of the layout.
@@ -104,7 +102,7 @@
        * Will log the user out.
        */
       logout() {
-        authService.logout();
+        this.$store.dispatch('auth/logout');
       },
 
       /**

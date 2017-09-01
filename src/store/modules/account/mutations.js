@@ -6,10 +6,10 @@
  * account module.
  */
 
-import { STORE } from './mutation-types';
+import { FIND } from './mutation-types';
 
 export default {
-  [STORE](state, account) {
+  [FIND](state, account) {
     state.email = account.email;
     state.firstName = account.firstName;
     state.lastName = account.lastName;

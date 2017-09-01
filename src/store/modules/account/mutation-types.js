@@ -6,8 +6,8 @@
  * on the account module.
  */
 
-export const STORE = 'STORE';
+export const FIND = 'FIND';
 
 export default {
-  STORE,
+  FIND,
 };

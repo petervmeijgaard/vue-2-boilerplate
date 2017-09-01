@@ -54,7 +54,7 @@
    *
    * Page where the user can login.
    */
-  import authService from '@/services/auth';
+
   import VLayout from '@/layouts/minimal';
   import VCard from '@/components/card';
 
@@ -88,7 +88,7 @@
        * @param {Object} user The user to be logged in.
        */
       login(user) {
-        authService.login(user);
+        this.$store.dispatch('auth/login', user);
       },
     },
 
