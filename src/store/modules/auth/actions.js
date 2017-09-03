@@ -6,9 +6,9 @@
  * auth module.
  */
 
-import * as types from './mutation-types';
 import Vue from 'vue';
 import store from '@/store';
+import * as types from './mutation-types';
 
 export const check = ({ commit }) => {
   commit(types.CHECK);

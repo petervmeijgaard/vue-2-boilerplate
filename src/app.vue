@@ -12,7 +12,8 @@
    */
 
   import store from './store';
-  import { router, i18n } from './bootstrap';
+  import { router } from './plugins/vue-router';
+  import { i18n } from './plugins/vue-i18n';
 
   export default {
     /**

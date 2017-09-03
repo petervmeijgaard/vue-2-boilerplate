@@ -24,10 +24,6 @@ module.exports = {
   },
   // add your custom rules here
   'rules': {
-    'global-require': 0,
-
-    'import/first': 0,
-
     'no-param-reassign': 0,
     'no-multi-assign': 0,
 
