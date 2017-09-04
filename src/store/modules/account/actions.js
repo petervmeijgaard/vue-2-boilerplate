@@ -6,14 +6,14 @@
  * account module.
  */
 
-import * as types from './mutation-types';
 import Transformer from '@/transformers/AccountTransformer';
+import * as types from './mutation-types';
 
 export const find = ({ commit }) => {
   /*
    * Normally you would use a proxy to fetch the account:
    *
-   * proxy
+   * new Proxy()
    *  .find()
    *  .then((response) => {
    *    commit(types.FIND, Transformer.fetch(response));

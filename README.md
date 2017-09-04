@@ -1,8 +1,8 @@
 # vue-2-boilerplate
-> A boilerplate for building medium to large Vue 2.0 single page applications
+> A boilerplate for building medium to large Vue 2 single page applications
 
 This boilerplate is based on the Vue webpack template.
-Common topics are discussed in the Vuejs [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
+Common topics are discussed in the VueJS [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
 
 ## Usage
 To get up and running run:
@@ -30,7 +30,12 @@ You need to configure your application a bit more, explained below:
 ### Config files ###
 Inside the `config/*.env.js`-files, you can configure your environment variables.
 Out of the box the applications comes bundled with AJAX-support.
-The only thing you need to do is change `http://example.*/api/v1` to your endpoint.
+The only thing you need to do is change `API_LOCATION` environment variable.
+If you want to use OAuth 2, you can set the `API_CLIENT_ID` and `API_CLIENT_SECRET` here as well.
+
+Are you in dev-mode and want to use different values than your production mode?
+No problem! Just copy the config from the `prod.env.js`-file and paste them in the `dev.env.js`-file.
+Edit the values and you're good to go!
 
 For more information, visit the [docs](http://vuejs-templates.github.io/webpack/env.html).
 
@@ -65,37 +70,23 @@ $ npm install -g vueture-cli
 ```
 
 ## Important Files ##
-So there are a couple of important files that needs to be addressed:
-
-### bootstrap.js ###
-This file will bootstrap the application.
-It will load:
- - vue
- - vue-router
- - vue-i18n
- - vuex
- - axios
- - bootstrap
- - font-awesome
-
-Don't like one of those packages?
-Just strip them from the `bootstrap` and the `package.json`-files.
+So there are two important files that needs to be addressed:
 
 ### main.js ###
-This file will load your single page application.
-It is also the entry point which will be loaded and compiled using webpack.
+This file will load your single page application and bootstrap all the plugins that are used.
+It will also serve as the entry point which will be loaded and compiled using webpack.
 
 ### app/index.vue ###
 The main Vue file.
 This file will load the page inside the `router-view`-component.
 It will check if the user is authenticated and load the resources accordingly.
 
-## Structure ##
+## Directory Structure ##
 Inside the `src`-directory, are a couple directories that needs to be addressed:
 
 ### Components ###
 Your components will be placed inside this directory.
-As you can see, this boilerplate already comes shipped with an pre-made panel component.
+As you can see, this boilerplate comes already shipped with a pre-made card component.
 
 ### Layouts ###
 Your layout files will be placed inside this directory.
@@ -103,8 +94,7 @@ When you are building a large single page application, you will be using differe
 For instance, your login-page or register-page will have a different layout than your account-page.
 
 The boilerplate comes out of the box with two layouts included.
-A minimal layout, used for the login and register page, and a default layout.
-Used for the home and account page.
+A minimal layout, used for the login and register page, and a default layout, used for the home and account page.
 
 ### Mixins ###
 The mixins you want to use with Vue will be placed inside this directory.
@@ -113,16 +103,36 @@ Inside the mixins directory is a `slot`-mixin.
 This mixin will add the `hasSlot()`-method to all the components it is used in.
 
 ### Pages ###
-The pages/views are placed inside this directory.
+The pages are placed inside this directory.
 By default it comes with an `account/index.vue`, `home/index.vue`, `login/index.vue` and a `register/index.vue` page,
 but feel free to add more.
 
+### Plugins ###
+This boilerplate comes with a couple of plugins you can use.
+It will load and configure:
+ - vue
+ - vue-router
+ - vue-i18n
+ - vuex
+ - vuex-router-sync
+ - axios
+ - bootstrap
+ - font-awesome
+
+Don't like one of those plugins?
+Just remove the file from the `plugins`-directory and remove the entry from the `main.js`-file.
+Also make sure to remove the package and dependencies from the `package.json`-file.
+
 ### Proxies ###
 Proxies are used to perform AJAX-requests.
-This boilerplate comes with a base proxy which can be used to make performing AJAX-requests easy.
-Create a new proxy, for example UserProxy, and extend the Proxy.
-This way you've got access to the all, find, update, create and destroy methods.
-For more information about how to use a proxy, take a look at the AccountProxy or AuthProxy.
+This boilerplate comes with a base proxy which can be used to make performing AJAX-requests fairly easy.
+Create a new proxy, for example `UserProxy`, and extend the `Proxy`.
+This way you've got access to the `all`, `find`, `update`, `create` and `destroy` methods.
+The boilerplate comes with an `AccountProxy` and `AuthProxy` by default.
+
+### Routes ###
+In this directory you can specify the routes that are used by this application.
+VueRouter loads the routes located in this directory.
 
 ### Store ###
 As mentioned before, Vuex is used as a single point of truth.
@@ -173,7 +183,6 @@ What are you waiting for?!
 Make something awesome!
 
 ## License ##
-
 The MIT License (MIT)
 
 Copyright (c) 2016 - 2017 Peter van Meijgaard
