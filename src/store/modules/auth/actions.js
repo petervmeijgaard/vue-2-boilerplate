@@ -18,7 +18,7 @@ export const register = ({ commit }) => {
   /*
    * Normally you would use a proxy to register the user:
    *
-   * proxy
+   * new Proxy()
    *  .register(payload)
    *  .then((response) => {
    *    commit(types.REGISTER, response);
@@ -37,7 +37,7 @@ export const login = ({ commit }) => {
   /*
    * Normally you would use a proxy to log the user in:
    *
-   * proxy
+   * new Proxy()
    *  .login(payload)
    *  .then((response) => {
    *    commit(types.LOGIN, response);
