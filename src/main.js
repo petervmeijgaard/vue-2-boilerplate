@@ -4,6 +4,7 @@
  *
  * Will initialize the application.
  */
+
 import Vue from 'vue';
 
 /* ============
@@ -12,6 +13,7 @@ import Vue from 'vue';
  *
  * Import and bootstrap the plugins.
  */
+
 import './plugins/vuex';
 import './plugins/axios';
 import './plugins/vue-i18n';
@@ -35,6 +37,7 @@ import './plugins/font-awesome';
  *
  * http://stylus-lang.com/
  */
+
 import './assets/stylus/app.styl';
 
 /* ============
@@ -43,6 +46,7 @@ import './assets/stylus/app.styl';
  *
  * Last but not least, we import the main application.
  */
+
 import App from './app';
 
 Vue.config.productionTip = false;
