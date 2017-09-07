@@ -48,6 +48,9 @@ import './assets/stylus/app.styl';
  */
 
 import App from './app';
+import store from './store';
+
+store.dispatch('auth/check');
 
 Vue.config.productionTip = false;
 
