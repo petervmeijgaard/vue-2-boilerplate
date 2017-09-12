@@ -50,20 +50,16 @@ import './assets/stylus/app.styl';
 import App from './app';
 import store from './store';
 
-store.dispatch('auth/check');
-
 Vue.config.productionTip = false;
 
+store.dispatch('auth/check');
+
+/* eslint-disable no-new */
 new Vue({
   /**
-   * The Vuex store.
+   * Bind the Vue instance to the HTML.
    */
-  store,
-
-  /**
-   * The router.
-   */
-  router,
+  el: '#app',
 
   /**
    * The localization plugin.
@@ -71,9 +67,19 @@ new Vue({
   i18n,
 
   /**
+   * The router.
+   */
+  router,
+
+  /**
+   * The Vuex store.
+   */
+  store,
+
+  /**
    * Will render the application.
    *
-   * @param {Function} h The render method.
+   * @param {Function} h Will create an element.
    */
   render: h => h(App),
-}).$mount('#app');
+});
