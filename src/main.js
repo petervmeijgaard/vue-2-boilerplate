@@ -16,8 +16,8 @@ import Vue from 'vue';
 
 import './plugins/vuex';
 import './plugins/axios';
-import './plugins/vue-i18n';
-import './plugins/vue-router';
+import { i18n } from './plugins/vue-i18n';
+import { router } from './plugins/vue-router';
 import './plugins/vuex-router-sync';
 import './plugins/bootstrap';
 import './plugins/font-awesome';
@@ -55,5 +55,25 @@ store.dispatch('auth/check');
 Vue.config.productionTip = false;
 
 new Vue({
+  /**
+   * The Vuex store.
+   */
+  store,
+
+  /**
+   * The router.
+   */
+  router,
+
+  /**
+   * The localization plugin.
+   */
+  i18n,
+
+  /**
+   * Will render the application.
+   *
+   * @param {Function} h The render method.
+   */
   render: h => h(App),
 }).$mount('#app');
