@@ -49,8 +49,8 @@
    * Page where the user can view the account information.
    */
 
-  import VLayout from '@/layouts/default';
-  import VCard from '@/components/card';
+  import VLayout from '@/layouts/Default';
+  import VCard from '@/components/Card';
 
   export default {
     /**

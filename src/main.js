@@ -47,7 +47,7 @@ import './assets/stylus/app.styl';
  * Last but not least, we import the main application.
  */
 
-import App from './app';
+import App from './App';
 import store from './store';
 
 Vue.config.productionTip = false;

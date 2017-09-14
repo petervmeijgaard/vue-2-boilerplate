@@ -55,8 +55,8 @@
    * Page where the user can login.
    */
 
-  import VLayout from '@/layouts/minimal';
-  import VCard from '@/components/card';
+  import VLayout from '@/layouts/Minimal';
+  import VCard from '@/components/Card';
 
   export default {
     /**
