@@ -31,6 +31,13 @@ class AuthProxy extends Proxy {
     return this.submit('post', `${this.endpoint}/token`, data);
   }
 
+  /**
+   * Method used to register the user.
+   *
+   * @param {Object} data The register data.
+   *
+   * @returns {Promise} The result in a promise.
+   */
   register(data) {
     return this.submit('post', `${this.endpoint}/register`, data);
   }
