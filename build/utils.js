@@ -29,7 +29,7 @@ exports.cssLoaders = function (options) {
 
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
-    var loaders = [cssLoader]
+    var loaders = [cssLoader, postcssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -38,8 +38,6 @@ exports.cssLoaders = function (options) {
         })
       })
     }
-
-    loaders.push(postcssLoader);
 
     // Extract CSS when that option is specified
     // (which is the case during production build)
