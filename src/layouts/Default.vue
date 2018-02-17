@@ -67,7 +67,7 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Default Layout
    * ============
    *
@@ -77,40 +77,40 @@
    * This way the app stays clean.
    */
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the layout.
      */
-    name: 'default-layout',
+  name: 'default-layout',
 
-    /**
+  /**
      * The data that can be used by the page.
      *
      * @returns {Object} The view-model data.
      */
-    data() {
-      return {
-        menuCollapsed: false,
-      };
+  data() {
+    return {
+      menuCollapsed: false,
+    };
+  },
+
+  /**
+     * The methods that the layout can use.
+     */
+  methods: {
+    /**
+       * Will log the user out.
+       */
+    logout() {
+      this.$store.dispatch('auth/logout');
     },
 
     /**
-     * The methods that the layout can use.
-     */
-    methods: {
-      /**
-       * Will log the user out.
-       */
-      logout() {
-        this.$store.dispatch('auth/logout');
-      },
-
-      /**
        * Will toggle the menu.
        */
-      toggleMenu() {
-        this.menuCollapsed = !this.menuCollapsed;
-      },
+    toggleMenu() {
+      this.menuCollapsed = !this.menuCollapsed;
     },
-  };
+  },
+};
 </script>

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Minimal Layout
    * ============
    *
@@ -20,10 +20,10 @@
    * This way the app stays clean.
    */
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the layout.
      */
-    name: 'minimal-layout',
-  };
+  name: 'minimal-layout',
+};
 </script>

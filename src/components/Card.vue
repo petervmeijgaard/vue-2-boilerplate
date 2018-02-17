@@ -22,7 +22,7 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Card Component
    * ============
    *
@@ -31,53 +31,53 @@
    * Gives an idea how components work.
    */
 
-  import SlotMixin from '@/mixins/slot';
+import SlotMixin from '@/mixins/slot';
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the component.
      */
-    name: 'card',
+  name: 'card',
 
-    /**
+  /**
      * The mixins that the component can use.
      */
-    mixins: [
-      SlotMixin,
-    ],
+  mixins: [
+    SlotMixin,
+  ],
 
-    /**
+  /**
      * The properties that the component accepts.
      */
-    props: {
-      contextualStyle: {
-        type: String,
-        required: false,
-      },
+  props: {
+    contextualStyle: {
+      type: String,
+      required: false,
     },
+  },
 
-    /**
+  /**
      * The computed properties that the component can use.
      */
-    computed: {
-      /**
+  computed: {
+    /**
        * Computed property which will compute the classes
        * for the header of the card.
        *
        * @returns {Array} The classes for the header.
        */
-      classNamesHeader() {
-        const classNames = ['card-header'];
+    classNamesHeader() {
+      const classNames = ['card-header'];
 
-        if (this.contextualStyle) {
-          classNames.push(`bg-${this.contextualStyle}`);
-          classNames.push('text-white');
-        } else {
-          classNames.push('bg-default');
-        }
+      if (this.contextualStyle) {
+        classNames.push(`bg-${this.contextualStyle}`);
+        classNames.push('text-white');
+      } else {
+        classNames.push('bg-default');
+      }
 
-        return classNames;
-      },
+      return classNames;
     },
-  };
+  },
+};
 </script>

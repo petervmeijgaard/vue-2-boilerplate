@@ -42,28 +42,28 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Account Index Page
    * ============
    *
    * Page where the user can view the account information.
    */
 
-  import VLayout from '@/layouts/Default';
-  import VCard from '@/components/Card';
+import VLayout from '@/layouts/Default.vue';
+import VCard from '@/components/Card.vue';
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the page.
      */
-    name: 'account-index',
+  name: 'account-index',
 
-    /**
+  /**
      * The components that the page can use.
      */
-    components: {
-      VLayout,
-      VCard,
-    },
-  };
+  components: {
+    VLayout,
+    VCard,
+  },
+};
 </script>

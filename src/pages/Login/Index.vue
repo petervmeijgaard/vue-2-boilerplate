@@ -48,56 +48,56 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Login Index Page
    * ============
    *
    * Page where the user can login.
    */
 
-  import VLayout from '@/layouts/Minimal';
-  import VCard from '@/components/Card';
+import VLayout from '@/layouts/Minimal.vue';
+import VCard from '@/components/Card.vue';
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the page.
      */
-    name: 'login-index',
+  name: 'login-index',
 
-    /**
+  /**
      * The data that can be used by the page.
      *
      * @returns {Object} The view-model data.
      */
-    data() {
-      return {
-        user: {
-          email: null,
-          password: null,
-        },
-      };
-    },
+  data() {
+    return {
+      user: {
+        email: null,
+        password: null,
+      },
+    };
+  },
 
-    /**
+  /**
      * The methods the page can use.
      */
-    methods: {
-      /**
+  methods: {
+    /**
        * Will log the user in.
        *
        * @param {Object} user The user to be logged in.
        */
-      login(user) {
-        this.$store.dispatch('auth/login', user);
-      },
+    login(user) {
+      this.$store.dispatch('auth/login', user);
     },
+  },
 
-    /**
+  /**
      * The components the page can use.
      */
-    components: {
-      VLayout,
-      VCard,
-    },
-  };
+  components: {
+    VLayout,
+    VCard,
+  },
+};
 </script>

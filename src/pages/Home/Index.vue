@@ -71,28 +71,28 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Home Index Page
    * ============
    *
    * The home index page.
    */
 
-  import VLayout from '@/layouts/Default';
-  import VCard from '@/components/Card';
+import VLayout from '@/layouts/Default.vue';
+import VCard from '@/components/Card.vue';
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the page.
      */
-    name: 'home-index',
+  name: 'home-index',
 
-    /**
+  /**
      * The components that the page can use.
      */
-    components: {
-      VLayout,
-      VCard,
-    },
-  };
+  components: {
+    VLayout,
+    VCard,
+  },
+};
 </script>

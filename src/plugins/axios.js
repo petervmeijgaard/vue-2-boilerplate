@@ -23,7 +23,8 @@ Axios.interceptors.response.use(
     }
 
     return Promise.reject(error);
-  });
+  },
+);
 
 // Bind Axios to Vue.
 Vue.$http = Axios;

@@ -87,59 +87,59 @@
 </template>
 
 <script>
-  /* ============
+/* ============
    * Register Index Page
    * ============
    *
    * Page where the user can register.
    */
 
-  import VLayout from '@/layouts/Minimal';
-  import VCard from '@/components/Card';
+import VLayout from '@/layouts/Minimal.vue';
+import VCard from '@/components/Card.vue';
 
-  export default {
-    /**
+export default {
+  /**
      * The name of the page.
      */
-    name: 'register-index',
+  name: 'register-index',
 
-    /**
+  /**
      * The data that can be used by the page.
      *
      * @returns {Object} The view-model data.
      */
-    data() {
-      return {
-        user: {
-          firstName: null,
-          lastName: null,
-          email: null,
-          passwordConfirm: null,
-          password: null,
-        },
-      };
-    },
+  data() {
+    return {
+      user: {
+        firstName: null,
+        lastName: null,
+        email: null,
+        passwordConfirm: null,
+        password: null,
+      },
+    };
+  },
 
-    /**
+  /**
      * The methods the page can use.
      */
-    methods: {
-      /**
+  methods: {
+    /**
        * Will register the user.
        *
        * @param {Object} user The user to be registered.
        */
-      register(user) {
-        this.$store.dispatch('auth/register', user);
-      },
+    register(user) {
+      this.$store.dispatch('auth/register', user);
     },
+  },
 
-    /**
+  /**
      * The components the page can use.
      */
-    components: {
-      VLayout,
-      VCard,
-    },
-  };
+  components: {
+    VLayout,
+    VCard,
+  },
+};
 </script>
