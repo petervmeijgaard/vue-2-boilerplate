@@ -31,15 +31,15 @@
   },
   "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
   "dependencies": {
-    "axios": "^0.16.2",
-    "bootstrap": "4.0.0-beta",
+    "axios": "^0.17.1",
+    "bootstrap": "4.0.0",
     "font-awesome": "^4.7.0",
     "register-service-worker": "^1.0.0",
-    "vue": "^2.4.2",
-    "vue-i18n": "^7.2.0",
-    "vue-router": "^2.7.0",
-    "vuex": "^2.4.0",
-    "vuex-router-sync": "^4.2.0"
+    "vue": "^2.5.13",
+    "vue-i18n": "^7.4.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.1",
