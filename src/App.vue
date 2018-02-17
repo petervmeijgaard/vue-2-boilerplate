@@ -1,25 +1,25 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view/>
   </div>
 </template>
 <script>
 /* ============
-   * Entry Point
-   * ============
-   *
-   * The entry point of the application
-   */
+ * Entry Point
+ * ============
+ *
+ * The entry point of the application
+ */
 
 export default {
   /**
-     * The name of the application.
-     */
-  name: 'vue-boilerplate',
+   * The name of the application.
+   */
+  name: 'VueBoilerplate',
 
   /**
-     * Fires when the app has been mounted.
-     */
+   * Fires when the app has been mounted.
+   */
   mounted() {
     // If the user is authenticated,
     // fetch the data from the API

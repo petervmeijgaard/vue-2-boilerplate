@@ -20,7 +20,7 @@
             <i
               class="fa fa-github fa-fw"
               aria-hidden="true"
-            ></i>
+            />
             <span class="pl-2">
               Gitter
             </span>
@@ -33,7 +33,7 @@
             <i
               class="fa fa-github fa-fw"
               aria-hidden="true"
-            ></i>
+            />
             <span class="pl-2">
               GitHub
             </span>
@@ -43,7 +43,10 @@
             href="http://twitter.com/petervmeijgaard"
             target="_blank"
           >
-            <i class="fa fa-twitter fa-fw" aria-hidden="true"></i>
+            <i
+              class="fa fa-twitter fa-fw"
+              aria-hidden="true"
+            />
             <span class="pl-2">
               Twitter
             </span>
@@ -57,7 +60,10 @@
           href="https://github.com/petervmeijgaard/vue-2.0-boilerplate/issues"
           target="_blank"
         >
-          <i class="fa fa-github fa-fw" aria-hidden="true"></i>
+          <i
+            class="fa fa-github fa-fw"
+            aria-hidden="true"
+          />
           <span class="pl-2">
             GitHub
           </span>
@@ -72,24 +78,24 @@
 
 <script>
 /* ============
-   * Home Index Page
-   * ============
-   *
-   * The home index page.
-   */
+ * Home Index Page
+ * ============
+ *
+ * The home index page.
+ */
 
 import VLayout from '@/layouts/Default.vue';
 import VCard from '@/components/Card.vue';
 
 export default {
   /**
-     * The name of the page.
-     */
-  name: 'home-index',
+   * The name of the page.
+   */
+  name: 'HomeIndex',
 
   /**
-     * The components that the page can use.
-     */
+   * The components that the page can use.
+   */
   components: {
     VLayout,
     VCard,

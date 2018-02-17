@@ -9,7 +9,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user fa-fw"></i>
+                <i class="fa fa-user fa-fw"/>
               </div>
               <input
                 v-model="user.firstName"
@@ -22,7 +22,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-user fa-fw"></i>
+                <i class="fa fa-user fa-fw"/>
               </div>
               <input
                 v-model="user.lastName"
@@ -35,7 +35,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-envelope fa-fw"></i>
+                <i class="fa fa-envelope fa-fw"/>
               </div>
               <input
                 v-model="user.email"
@@ -48,7 +48,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"></i>
+                <i class="fa fa-lock fa-fw"/>
               </div>
               <input
                 v-model="user.password"
@@ -61,7 +61,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"></i>
+                <i class="fa fa-lock fa-fw"/>
               </div>
               <input
                 v-model="user.passwordConfirm"
@@ -88,26 +88,34 @@
 
 <script>
 /* ============
-   * Register Index Page
-   * ============
-   *
-   * Page where the user can register.
-   */
+ * Register Index Page
+ * ============
+ *
+ * Page where the user can register.
+ */
 
 import VLayout from '@/layouts/Minimal.vue';
 import VCard from '@/components/Card.vue';
 
 export default {
   /**
-     * The name of the page.
-     */
-  name: 'register-index',
+   * The name of the page.
+   */
+  name: 'RegisterIndex',
 
   /**
-     * The data that can be used by the page.
-     *
-     * @returns {Object} The view-model data.
-     */
+   * The components the page can use.
+   */
+  components: {
+    VLayout,
+    VCard,
+  },
+
+  /**
+   * The data that can be used by the page.
+   *
+   * @returns {Object} The view-model data.
+   */
   data() {
     return {
       user: {
@@ -121,25 +129,17 @@ export default {
   },
 
   /**
-     * The methods the page can use.
-     */
+   * The methods the page can use.
+   */
   methods: {
     /**
-       * Will register the user.
-       *
-       * @param {Object} user The user to be registered.
-       */
+     * Will register the user.
+     *
+     * @param {Object} user The user to be registered.
+     */
     register(user) {
       this.$store.dispatch('auth/register', user);
     },
-  },
-
-  /**
-     * The components the page can use.
-     */
-  components: {
-    VLayout,
-    VCard,
   },
 };
 </script>

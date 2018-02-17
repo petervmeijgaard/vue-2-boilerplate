@@ -9,7 +9,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-envelope fa-fw"></i>
+                <i class="fa fa-envelope fa-fw"/>
               </div>
               <input
                 v-model="user.email"
@@ -22,7 +22,7 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"></i>
+                <i class="fa fa-lock fa-fw"/>
               </div>
               <input
                 v-model="user.password"
@@ -60,15 +60,23 @@ import VCard from '@/components/Card.vue';
 
 export default {
   /**
-     * The name of the page.
-     */
-  name: 'login-index',
+   * The name of the page.
+   */
+  name: 'LoginIndex',
 
   /**
-     * The data that can be used by the page.
-     *
-     * @returns {Object} The view-model data.
-     */
+   * The components the page can use.
+   */
+  components: {
+    VLayout,
+    VCard,
+  },
+
+  /**
+   * The data that can be used by the page.
+   *
+   * @returns {Object} The view-model data.
+   */
   data() {
     return {
       user: {
@@ -79,25 +87,17 @@ export default {
   },
 
   /**
-     * The methods the page can use.
-     */
+   * The methods the page can use.
+   */
   methods: {
     /**
-       * Will log the user in.
-       *
-       * @param {Object} user The user to be logged in.
-       */
+     * Will log the user in.
+     *
+     * @param {Object} user The user to be logged in.
+     */
     login(user) {
       this.$store.dispatch('auth/login', user);
     },
-  },
-
-  /**
-     * The components the page can use.
-     */
-  components: {
-    VLayout,
-    VCard,
   },
 };
 </script>

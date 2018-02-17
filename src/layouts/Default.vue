@@ -13,7 +13,7 @@
         type="button"
         @click="toggleMenu"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"/>
       </button>
 
       <div
@@ -48,7 +48,7 @@
             href="#"
             @click.prevent="logout"
           >
-            <i class="fa fa-sign-out"></i>
+            <i class="fa fa-sign-out"/>
           </a>
         </span>
       </div>
@@ -58,7 +58,7 @@
       <div class="row">
         <div class="col col-12">
           <!-- Content will be placed here -->
-          <slot></slot>
+          <slot/>
         </div>
       </div>
     </div>
@@ -68,26 +68,26 @@
 
 <script>
 /* ============
-   * Default Layout
-   * ============
-   *
-   * Used for the home and account pages.
-   *
-   * Layouts are used to store a lot of shared code.
-   * This way the app stays clean.
-   */
+ * Default Layout
+ * ============
+ *
+ * Used for the home and account pages.
+ *
+ * Layouts are used to store a lot of shared code.
+ * This way the app stays clean.
+ */
 
 export default {
   /**
-     * The name of the layout.
-     */
-  name: 'default-layout',
+   * The name of the layout.
+   */
+  name: 'DefaultLayout',
 
   /**
-     * The data that can be used by the page.
-     *
-     * @returns {Object} The view-model data.
-     */
+   * The data that can be used by the page.
+   *
+   * @returns {Object} The view-model data.
+   */
   data() {
     return {
       menuCollapsed: false,
@@ -95,19 +95,19 @@ export default {
   },
 
   /**
-     * The methods that the layout can use.
-     */
+   * The methods that the layout can use.
+   */
   methods: {
     /**
-       * Will log the user out.
-       */
+     * Will log the user out.
+     */
     logout() {
       this.$store.dispatch('auth/logout');
     },
 
     /**
-       * Will toggle the menu.
-       */
+     * Will toggle the menu.
+     */
     toggleMenu() {
       this.menuCollapsed = !this.menuCollapsed;
     },

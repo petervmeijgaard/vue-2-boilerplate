@@ -7,30 +7,30 @@
       <div slot="body">
         <table class="table table-striped">
           <thead>
-          <tr>
-            <th>
-              First Name
-            </th>
-            <th>
-              Last Name
-            </th>
-            <th>
-              Email
-            </th>
-          </tr>
+            <tr>
+              <th>
+                First Name
+              </th>
+              <th>
+                Last Name
+              </th>
+              <th>
+                Email
+              </th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>
-              {{$store.state.account.firstName}}
-            </td>
-            <td>
-              {{$store.state.account.lastName}}
-            </td>
-            <td>
-              {{$store.state.account.email}}
-            </td>
-          </tr>
+            <tr>
+              <td>
+                {{ $store.state.account.firstName }}
+              </td>
+              <td>
+                {{ $store.state.account.lastName }}
+              </td>
+              <td>
+                {{ $store.state.account.email }}
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -43,24 +43,24 @@
 
 <script>
 /* ============
-   * Account Index Page
-   * ============
-   *
-   * Page where the user can view the account information.
-   */
+ * Account Index Page
+ * ============
+ *
+ * Page where the user can view the account information.
+ */
 
 import VLayout from '@/layouts/Default.vue';
 import VCard from '@/components/Card.vue';
 
 export default {
   /**
-     * The name of the page.
-     */
-  name: 'account-index',
+   * The name of the page.
+   */
+  name: 'AccountIndex',
 
   /**
-     * The components that the page can use.
-     */
+   * The components that the page can use.
+   */
   components: {
     VLayout,
     VCard,
