@@ -44,7 +44,7 @@
         </ul>
         <span class="navbar-text">
           <a
-            class="btn btn-light"
+            class="btn btn-secondary"
             href="#"
             @click.prevent="logout"
           >

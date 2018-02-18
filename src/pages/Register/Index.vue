@@ -8,8 +8,10 @@
         <form @submit.prevent="register(user)">
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-user fa-fw"/>
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-user fa-fw"/>
+                </span>
               </div>
               <input
                 v-model="user.firstName"
@@ -21,8 +23,10 @@
           </div>
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-user fa-fw"/>
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-user fa-fw"/>
+                </span>
               </div>
               <input
                 v-model="user.lastName"
@@ -34,8 +38,10 @@
           </div>
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-envelope fa-fw"/>
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-envelope fa-fw"/>
+                </span>
               </div>
               <input
                 v-model="user.email"
@@ -47,8 +53,10 @@
           </div>
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"/>
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-lock fa-fw"/>
+                </span>
               </div>
               <input
                 v-model="user.password"
@@ -60,8 +68,10 @@
           </div>
           <div class="form-group">
             <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"/>
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fa fa-lock fa-fw"/>
+                </span>
               </div>
               <input
                 v-model="user.passwordConfirm"
