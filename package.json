@@ -1,11 +1,57 @@
 {
   "name": "vue-2-boilerplate",
   "version": "0.0.0",
-  "description": "A boilerplate for medium to large Vue 2 single page applications",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test": "vue-cli-service test",
     "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bootstrap": "4.0.0",
+    "font-awesome": "^4.7.0",
+    "register-service-worker": "^1.0.0",
+    "vue": "^2.5.13",
+    "vue-i18n": "^7.4.2",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1",
+    "vuex-router-sync": "^5.0.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.1",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.1",
+    "@vue/cli-plugin-pwa": "^3.0.0-beta.1",
+    "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.1",
+    "@vue/cli-service": "^3.0.0-beta.1",
+    "@vue/eslint-config-airbnb": "^3.0.0-beta.1",
+    "@vue/test-utils": "^1.0.0-beta.10",
+    "chai": "^4.1.2",
+    "lint-staged": "^6.1.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "author": "Peter van Meijgaard <petervanmeijgaard@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petervmeijgaard/vue-2-boilerplate/issues"
+  },
+  "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
+  "lint-staged": {
+    "*.js": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -24,50 +70,8 @@
     "Page",
     "Application"
   ],
-  "author": "Peter van Meijgaard <petervanmeijgaard@hotmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/petervmeijgaard/vue-2-boilerplate/issues"
-  },
-  "homepage": "https://github.com/petervmeijgaard/vue-2-boilerplate#readme",
-  "dependencies": {
-    "axios": "^0.17.1",
-    "bootstrap": "4.0.0",
-    "font-awesome": "^4.7.0",
-    "register-service-worker": "^1.0.0",
-    "vue": "^2.5.13",
-    "vue-i18n": "^7.4.2",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1",
-    "vuex-router-sync": "^5.0.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.1",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.1",
-    "@vue/cli-plugin-pwa": "^3.0.0-beta.1",
-    "@vue/cli-service": "^3.0.0-beta.1",
-    "@vue/eslint-config-airbnb": "^3.0.0-beta.1",
-    "lint-staged": "^6.1.1",
-    "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.13"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ],
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "lint-staged": {
-    "*.js": [
-      "vue-cli-service lint",
-      "git add"
-    ],
-    "*.vue": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+  "description": "A boilerplate for medium to large Vue 2 single page applications"
 }
