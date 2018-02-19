@@ -8,7 +8,7 @@
  * Entry Point
  * ============
  *
- * The entry point of the application
+ * The entry point of the application.
  */
 
 export default {

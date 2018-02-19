@@ -53,11 +53,11 @@
 
 <script>
 /* ============
-   * Login Index Page
-   * ============
-   *
-   * Page where the user can login.
-   */
+ * Login Index Page
+ * ============
+ *
+ * Page where the user can login.
+ */
 
 import VLayout from '@/layouts/Minimal.vue';
 import VCard from '@/components/Card.vue';
