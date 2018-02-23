@@ -14,10 +14,10 @@ Yes, that's it. Only two commands!
 
 If you still think that's too much effort, you could also run:
 ``` bash
-$ npm i && npm run dev
+$ npm i && npm run serve
 ```
 But yeah, this will basically do the same as `npm install`.
-If even this is too much of a deal, try creating an alias and bind `npm install && npm run dev` to `npmid`.
+If even this is too much of a deal, try creating an alias and bind `npm install && npm run serve` to `npmis`.
 
 ## Configuration ##
 > Wait a minute, you just said that I only need to run npm install?
