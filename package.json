@@ -5,6 +5,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
+    "e2e": "vue-cli-service e2e",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.1",
+    "@vue/cli-plugin-e2e-nightwatch": "^3.0.0-beta.1",
     "@vue/cli-plugin-eslint": "^3.0.0-beta.1",
     "@vue/cli-plugin-pwa": "^3.0.0-beta.1",
     "@vue/cli-plugin-unit-mocha": "^3.0.0-beta.1",
@@ -38,7 +40,7 @@
     "not ie <= 8"
   ],
   "author": "Peter van Meijgaard <petervanmeijgaard@hotmail.com>",
-  "license": "MIT",
+  "description": "A boilerplate for medium to large Vue 2 single page applications",
   "bugs": {
     "url": "https://github.com/petervmeijgaard/vue-2-boilerplate/issues"
   },
@@ -73,5 +75,5 @@
   "gitHooks": {
     "pre-commit": "lint-staged"
   },
-  "description": "A boilerplate for medium to large Vue 2 single page applications"
+  "license": "MIT"
 }
