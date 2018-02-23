@@ -8,7 +8,7 @@ Common topics are discussed in the VueJS [docs](http://vuejs-templates.github.io
 To get up and running run:
 ``` bash
 $ npm install
-$ npm run dev
+$ npm run serve
 ```
 Yes, that's it. Only two commands!
 
@@ -27,47 +27,17 @@ Yeah, to get up and running real quick, `npm install` is enough.
 But if you want to, let's say, connect to an external API, there's a little bit more involved.
 You need to configure your application a bit more, explained below:
 
-### Config files ###
-Inside the `config/*.env.js`-files, you can configure your environment variables.
-Out of the box the applications comes bundled with AJAX-support.
-The only thing you need to do is change `API_LOCATION` environment variable.
-If you want to use OAuth 2, you can set the `API_CLIENT_ID` and `API_CLIENT_SECRET` here as well.
-
-Are you in dev-mode and want to use different values than your production mode?
-No problem! Just copy the config from the `prod.env.js`-file and paste them in the `dev.env.js`-file.
-Edit the values and you're good to go!
-
-For more information, visit the [docs](http://vuejs-templates.github.io/webpack/env.html).
+### Environment variables ###
+In the root of the boilerplate is a predefined environment file.
+Copy the file and name it `.env` or a configuration specific file like `.env.dev`.
+For more information, visit the [docs](https://github.com/vuejs/vue-cli/blob/dev/docs/env.md).
 
 ## What's included ##
-- `npm run dev`: first-in-class development experience.
-  - Webpack + `vue-loader` for single file Vue components.
-  - State preserving hot-reload
-  - State preserving compilation error overlay
-  - Lint-on-save with ESLint
-  - Source maps
-
-- `npm run build`: Production ready build.
-  - JavaScript minified with [UglifyJS](https://github.com/mishoo/UglifyJS2).
-  - HTML minified with [html-minifier](https://github.com/kangax/html-minifier).
-  - CSS across all components extracted into a single file and minified with [cssnano](https://github.com/ben-eb/cssnano).
-  - All static assets compiled with version hashes for efficient long-term caching, and a production `index.html` is auto-generated with proper URLs to these generated assets.
-
+- `npm run serve`: first-in-class development experience.
+- `npm run build`: production ready build.
 - `npm run unit`: start the Karma Test Runner.
-  - Unit Tests are provided by Karma, Mocha, Chai and Sinon-Chai.
-  - The testing files should be place under **test/unit/specs**.
-  - Make sure every test file ends in `.spec.js`
-
 - `npm run e2e`: start the Nightwatch Test Runner.
-  - End to End (e2e) Tests are provided by Nightwatch, Selenium and PhantomJS.
-  - The testing files should be place under **test/e2e/specs**.
-
-## Other tools ##
-### Scaffolding ###
-For quickly scaffolding components, pages, layouts and more, install the [Vueture CLI tool](https://github.com/vueture/vueture-cli).
-``` bash
-$ npm install -g vueture-cli
-```
+- `npm run lint`: lint the files using ESLint.
 
 ## Important Files ##
 So there are two important files that needs to be addressed:
@@ -76,13 +46,17 @@ So there are two important files that needs to be addressed:
 This file will load your single page application and bootstrap all the plugins that are used.
 It will also serve as the entry point which will be loaded and compiled using webpack.
 
-### app/index.vue ###
+### App.vue ###
 The main Vue file.
 This file will load the page inside the `router-view`-component.
 It will check if the user is authenticated and load the resources accordingly.
 
 ## Directory Structure ##
 Inside the `src`-directory, are a couple directories that needs to be addressed:
+
+### Assets ###
+The assets that you want to use are places inside this directory.
+This can be images, stylesheets, videos... you name it.
 
 ### Components ###
 Your components will be placed inside this directory.
@@ -96,28 +70,27 @@ For instance, your login-page or register-page will have a different layout than
 The boilerplate comes out of the box with two layouts included.
 A minimal layout, used for the login and register page, and a default layout, used for the home and account page.
 
+### Locale ###
+The Vue I18n plugin is used for localization.
+In the locale directory you'll find an example for internalization.
+This boilerplate comes with examples for English and Dutch out of the box, but feel free to add more!
+
 ### Mixins ###
 The mixins you want to use with Vue will be placed inside this directory.
 
 Inside the mixins directory is a `slot`-mixin.
 This mixin will add the `hasSlot()`-method to all the components it is used in.
 
-### Pages ###
-The pages are placed inside this directory.
-By default it comes with an `account/index.vue`, `home/index.vue`, `login/index.vue` and a `register/index.vue` page,
-but feel free to add more.
-
 ### Plugins ###
 This boilerplate comes with a couple of plugins you can use.
 It will load and configure:
- - vue
- - vue-router
- - vue-i18n
- - vuex
- - vuex-router-sync
  - axios
  - bootstrap
  - font-awesome
+ - vue-i18n
+ - vue-router
+ - vuex
+ - vuex-router-sync
 
 Don't like one of those plugins?
 Just remove the file from the `plugins`-directory and remove the entry from the `main.js`-file.
@@ -132,7 +105,7 @@ The boilerplate comes with an `AccountProxy` and `AuthProxy` by default.
 
 ### Routes ###
 In this directory you can specify the routes that are used by this application.
-VueRouter loads the routes located in this directory.
+Vue Router loads the routes located in this directory.
 
 ### Store ###
 As mentioned before, Vuex is used as a single point of truth.
@@ -164,6 +137,11 @@ So given the previous example, using a transformer, it will look something like 
 ### Utils ###
 Here you can place handy utils you want to use inside your application.
 
+### Views ###
+The pages are placed inside this directory.
+By default it comes with an `Account/Index.vue`, `Home/Index.vue`, `Login/Index.vue` and a `Register/Index.vue` page,
+but feel free to add more.
+
 ### Test ###
 Both the Unit Tests and the End-2-End Tests are within the `test/` folder.
 Unit Tests should go inside the `test/unit/specs` folder.
@@ -185,7 +163,7 @@ Make something awesome!
 ## License ##
 The MIT License (MIT)
 
-Copyright (c) 2016 - 2017 Peter van Meijgaard
+Copyright (c) 2016 - 2018 Peter van Meijgaard
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

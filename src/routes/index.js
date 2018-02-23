@@ -10,7 +10,7 @@ export default [
   {
     path: '/home',
     name: 'home.index',
-    component: () => import('@/pages/Home/Index.vue'),
+    component: () => import('@/views/Home/Index.vue'),
 
     // If the user needs to be authenticated to view this page
     meta: {
@@ -22,7 +22,7 @@ export default [
   {
     path: '/account',
     name: 'account.index',
-    component: () => import('@/pages/Account/Index.vue'),
+    component: () => import('@/views/Account/Index.vue'),
 
     // If the user needs to be authenticated to view this page.
     meta: {
@@ -34,7 +34,7 @@ export default [
   {
     path: '/login',
     name: 'login.index',
-    component: () => import('@/pages/Login/Index.vue'),
+    component: () => import('@/views/Login/Index.vue'),
 
     // If the user needs to be a guest to view this page.
     meta: {
@@ -46,7 +46,7 @@ export default [
   {
     path: '/register',
     name: 'register.index',
-    component: () => import('@/pages/Register/Index.vue'),
+    component: () => import('@/views/Register/Index.vue'),
 
     // If the user needs to be a guest to view this page.
     meta: {

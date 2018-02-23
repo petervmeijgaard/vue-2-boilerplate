@@ -2,7 +2,7 @@
   <v-layout>
     <v-card contextual-style="dark">
       <span slot="header">
-        Welcome!
+        {{ $t('general.welcome') }}
       </span>
       <div slot="body">
         <p>
