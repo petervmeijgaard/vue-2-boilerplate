@@ -2,8 +2,8 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <router-link
-        class="navbar-brand"
         :to="{ name: 'home.index' }"
+        class="navbar-brand"
       >
         Vue 2 Boilerplate
       </router-link>
@@ -17,8 +17,8 @@
       </button>
 
       <div
-        class="collapse navbar-collapse"
         :class="{ show : menuCollapsed}"
+        class="collapse navbar-collapse"
       >
         <ul class="navbar-nav mr-auto">
           <router-link

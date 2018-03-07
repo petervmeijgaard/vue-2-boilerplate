@@ -1,20 +1,20 @@
 <template>
   <div class="card">
     <h4
-      :class="classNamesHeader"
       v-if="hasSlot('header')"
+      :class="classNamesHeader"
     >
       <slot name="header"/>
     </h4>
     <div
-      class="card-body"
       v-if="hasSlot('body')"
+      class="card-body"
     >
       <slot name="body"/>
     </div>
     <div
-      class="card-footer"
       v-if="hasSlot('footer')"
+      class="card-footer"
     >
       <slot name="footer"/>
     </div>
