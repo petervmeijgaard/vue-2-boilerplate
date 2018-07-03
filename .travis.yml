@@ -1,7 +1,9 @@
 language: node_js
 node_js:
-  - "6"
-  - "6.1"
+  - "8"
+  - "9"
+  - "10"
+  - "10.5"
 before_install:
   - npm install -g yarn
 install:
