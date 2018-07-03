@@ -21,6 +21,7 @@ import { router } from './plugins/vue-router';
 import './plugins/vuex-router-sync';
 import './plugins/bootstrap';
 import './plugins/font-awesome';
+import './plugins/register-service-worker';
 
 /* ============
  * Styling
