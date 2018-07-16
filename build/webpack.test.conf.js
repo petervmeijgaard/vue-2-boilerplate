@@ -1,3 +1,4 @@
+/* eslint-disable */
 // This is the webpack config used for unit tests.
 
 var utils = require('./utils')
