@@ -8,6 +8,7 @@
 
 import { FIND } from './mutation-types';
 
+/* eslint-disable no-param-reassign */
 export default {
   [FIND](state, account) {
     state.email = account.email;

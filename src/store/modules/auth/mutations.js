@@ -14,6 +14,7 @@ import {
   LOGOUT,
 } from './mutation-types';
 
+/* eslint-disable no-param-reassign */
 export default {
   [CHECK](state) {
     state.authenticated = !!localStorage.getItem('id_token');
