@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 import { mount } from '@vue/test-utils';
-import Home from '@/pages/Home/Index.vue';
+import Home from '@/views/Home/Index.vue';
 
 describe('Home index.vue', () => {
   it('should render correct contents', () => {
