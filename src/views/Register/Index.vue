@@ -10,7 +10,7 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i class="fa fa-user fa-fw"/>
+                  <i class="fa fa-user fa-fw" />
                 </span>
               </div>
               <input
@@ -25,7 +25,7 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i class="fa fa-user fa-fw"/>
+                  <i class="fa fa-user fa-fw" />
                 </span>
               </div>
               <input
@@ -40,7 +40,7 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i class="fa fa-envelope fa-fw"/>
+                  <i class="fa fa-envelope fa-fw" />
                 </span>
               </div>
               <input
@@ -55,7 +55,7 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i class="fa fa-lock fa-fw"/>
+                  <i class="fa fa-lock fa-fw" />
                 </span>
               </div>
               <input
@@ -70,7 +70,7 @@
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">
-                  <i class="fa fa-lock fa-fw"/>
+                  <i class="fa fa-lock fa-fw" />
                 </span>
               </div>
               <input
@@ -90,7 +90,9 @@
       </div>
       <div slot="footer">
         Already got an account?
-        <router-link :to="{ name: 'login.index' }">Login</router-link>
+        <router-link :to="{ name: 'login.index' }">
+          Login
+        </router-link>
       </div>
     </v-card>
   </v-layout>

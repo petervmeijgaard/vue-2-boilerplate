@@ -157,8 +157,8 @@ class BaseProxy {
     const keys = Object.keys(this.parameters);
 
     const parameterStrings = keys
-      .filter(key => !!this.parameters[key])
-      .map(key => `${key}=${this.parameters[key]}`);
+      .filter((key) => !!this.parameters[key])
+      .map((key) => `${key}=${this.parameters[key]}`);
 
     return parameterStrings.length === 0 ? '' : `?${parameterStrings.join('&')}`;
   }

@@ -82,5 +82,5 @@ new Vue({
    *
    * @param {Function} h Will create an element.
    */
-  render: h => h(App),
+  render: (h) => h(App),
 });
