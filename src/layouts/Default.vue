@@ -13,7 +13,7 @@
         type="button"
         @click="toggleMenu"
       >
-        <span class="navbar-toggler-icon"/>
+        <span class="navbar-toggler-icon" />
       </button>
 
       <div
@@ -48,7 +48,7 @@
             href="#"
             @click.prevent="logout"
           >
-            <i class="fa fa-sign-out"/>
+            <i class="fa fa-sign-out" />
           </a>
         </span>
       </div>
@@ -58,11 +58,10 @@
       <div class="row">
         <div class="col col-12">
           <!-- Content will be placed here -->
-          <slot/>
+          <slot />
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
