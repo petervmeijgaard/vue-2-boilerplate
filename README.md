@@ -1,5 +1,5 @@
 # vue-2-boilerplate
-> A boilerplate for building medium to large Vue 2 single page applications
+> A boilerplate for building medium to large Vue 2 single-page applications
 
 This boilerplate is based on the Vue webpack template. Common topics are discussed in the VueJS
 [docs](http://vuejs-templates.github.io/webpack). Make sure to read it!
@@ -21,7 +21,7 @@ and bind `yarn && yarn serve` to `yarn:serve`.
 
 ## Configuration ##
 > Wait a minute, you just said that I only need to run `yarn`?
-> What's this? I need to do more?
+> What's this? Do I need to do more?
 
 Yeah, to get up and running real quick, `yarn` is enough. But if you want to, let's say, connect to an external
 API, there's a little bit more involved. You need to configure your application a bit more, explained below:
@@ -33,27 +33,26 @@ specific file like `.env.dev`. For more information, visit the
 
 ## What's included ##
 - `yarn serve`: first-in-class development experience.
-- `yarn build`: production ready build.
+- `yarn build`: production-ready build.
 - `yarn unit`: start the Karma Test Runner.
 - `yarn e2e`: start the Nightwatch Test Runner.
 - `yarn lint`: lint the files using ESLint.
 
 ## Important Files ##
-So there are two important files that needs to be addressed:
+So there are two important files that need to be addressed:
 
 ### main.js ###
-This file will load your single page application and bootstrap all the plugins that are used. It will also serve as the
-entry point which will be loaded and compiled using webpack.
+This file will load your single page application and bootstrap all the plugins that are used. It will also serve as the entry point which will be loaded and compiled using webpack.
 
 ### App.vue ###
 The main Vue file. This file will load the page inside the `router-view`-component. It will check if the user is
 authenticated and load the resources accordingly.
 
 ## Directory Structure ##
-Inside the `src`-directory, are a couple directories that needs to be addressed:
+Inside the `src`-directory, are a couple of directories that need to be addressed:
 
 ### Assets ###
-The assets that you want to use are places inside this directory. This can be images, stylesheets, videos... you name
+The assets that you want to use are placed inside this directory. This can be images, stylesheets, videos... you name
 it.
 
 ### Components ###
@@ -69,7 +68,7 @@ The boilerplate comes out of the box with two layouts included. A minimal layout
 and a default layout, used for the home and account page.
 
 ### Locale ###
-The Vue I18n plugin is used for localization. In the locale directory you'll find an example for internalization. This
+The Vue I18n plugin is used for localization. In the locale directory, you'll find an example for internalization. This
 boilerplate comes with examples for English and Dutch out of the box, but feel free to add more!
 
 ### Mixins ###
@@ -90,16 +89,16 @@ It will load and configure:
  - vuex-router-sync
 
 Don't like one of those plugins? Just remove the file from the `plugins`-directory and remove the entry from the
-`main.js`-file. Also make sure to remove the package and dependencies from the `package.json`-file.
+`main.js`-file. Also, make sure to remove the package and dependencies from the `package.json`-file.
 
 ### Proxies ###
 Proxies are used to perform AJAX-requests. This boilerplate comes with a base proxy which can be used to make performing
-AJAX-requests fairly easy. Create a new proxy, for example `UserProxy`, and extend the `Proxy`. This way you've got
+AJAX-requests fairly easy. Create a new proxy, for example, `UserProxy`, and extend the `Proxy`. This way you've got
 access to the `all`, `find`, `update`, `create` and `destroy` methods. The boilerplate comes with an `AccountProxy` and
 `AuthProxy` by default.
 
 ### Routes ###
-In this directory you can specify the routes that are used by this application. Vue Router loads the routes located in
+In this directory, you can specify the routes that are used by this application. Vue Router loads the routes located in
 this directory.
 
 ### Store ###
@@ -108,7 +107,7 @@ As mentioned before, Vuex is used as a single point of truth. To learn more abou
 
 ### Transformers ###
 Transformers are used to transform the incoming and outgoing requests. If you have an API where you can retrieve posts
-from, a post wil look something like this:
+from, a post will look something like this:
 ``` JSON
 {
   "id" : 1,
@@ -137,7 +136,7 @@ The pages are placed inside this directory. By default it comes with an `Account
 
 ### Test ###
 Both the Unit Tests and the End-2-End Tests are within the `test/` folder. Unit Tests should go inside the
-`test/unit/specs` folder. E2e Tests should go inside the `test/e2e/specs` folder. You can read more about both test on
+`test/unit/specs` folder. E2e Tests should go inside the `test/e2e/specs` folder. You can read more about both tests on
 the [Webpack Boilerplate Testing Session](http://vuejs-templates.github.io/webpack/unit.html).
 
 ## Got questions or improvements? ##
